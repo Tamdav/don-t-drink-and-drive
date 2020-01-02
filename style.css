@@ -1,24 +1,62 @@
-ul{
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    background-color: indianred;
+
+* {
+  font-family: verdana;
 }
 
-li{
-    float:left;
+body {
+  background-color: #FCF5E8;
 }
 
-li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+h1{
+  color:#25A079;
+  font-weight: normal;
 }
 
-li a:hover{
-    background-color: #cd5c5c;
+h3{
+  color:#25A079;
+  font-weight: normal;
 }
 
+.main-nav-ul{
+  list-style-type: none;
+  border-style: none none solid;
+  color:#3D4F49;
+  width: 100%;
+  border-color:#A8D6C6;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a:hover {
+ background-color:#cbe7dd;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #3D4F49;
+}
+/* Change the link color to #111 (black) on hover */
+
+.active {
+  background-color:#63b699;
+}
+
+.info-nav-list{
+  position: sticky;
+  border-style: solid solid none;
+  list-style-position: inside;
+  list-style-type: lower-roman;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  height: auto;
+  background-color: #f1f1f1;
+}
