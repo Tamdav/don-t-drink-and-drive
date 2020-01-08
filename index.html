@@ -14,7 +14,7 @@
       <ul class = "main-nav-ul">
         <li1><a href="#info">Info</a></li1>
         <li1><a href="#berechnen">Berechnen</a></li1>
-        <li1><a href="#ergebnis">Ergebnis</a></li1>
+        <!--<li1><a href="#ergebnis">Ergebnis</a></li1>-->
       </ul>
     </nav>
   </header>
@@ -58,8 +58,22 @@
 
 
   <section id="berechnen">
-    <h3> Promille gehalt berechnen </h3>
-    <p> Lorem Ipsum jfkösljghaöjgb </p>
+    <div class ="daten-container">
+      <div class = "person">
+      <h4> Angabe zur Person </h4>
+      <p>Geschlecht:<p>
+      <form action = "/script.js">
+        <select name="geschlecht">
+          <option value ="weiblich">weiblich</option>
+          <option value ="männlich">männlich</option>
+          <option value ="keine Angabe">keine angabe</option>
+        </select>
+        <input type = "text" name = "groesse" value = "Körpergröße">
+        <input type = "text" name = "gewicht" value = "Körpergewicht">
+      </form>
+    </div>
+
+  </div>
   </section>
 
   <section id="ergebnis">

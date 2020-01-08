@@ -1,26 +1,35 @@
-* {
-  font-family: verdana;
+*{
+  font-family: arial;
+  font-weight: normal;
 }
 
 body {
-  background-color: #FCF5E8;
+  background-color: #fcfcfc;
+  background-blend-mode: darken;
 }
 
 h1{
   color:#25A079;
-  font-weight: normal;
 }
 
 h3{
   color:#25A079;
-  font-weight: normal;
 }
 
 h4{
-  color:orange;
-  margin-top: 3em;
-  margin-bottom: 0em;
+  color: #4b7a67;
+}
 
+.person h4{
+  color: #1f1f1f;
+  margin-left: 2em;
+
+}
+
+.person p{
+  color: #1f1f1f;
+  font-size: 12px;
+  margin-left: 1em;
 }
 
 .main-nav-ul{
@@ -79,17 +88,48 @@ li a {
 }
 
 .info-inhalt {
-  margin: 0;
+  margin: 2em;
   padding: 10;
   position: static;
-  text-align: justify;
 }
 
 .info-inhalt p{
+  font-size: 14px;
   display: block;
   margin-top: 0em;
   margin-bottom: 1em;
   margin-left: 50;
   margin-right: 10;
-  background-color: #fff2e6;
+}
+
+.daten-container{
+  display: grid;
+  height: auto;
+  align-content: center;
+  grid-template-columns: 12em 35em 40em;
+  grid-gap: 10px;
+}
+.person{
+  height: auto;
+  background-color: #f0eeeb;
+  background-blend-mode: lighten;
+  border-radius: 1em;
+}
+
+.person select{
+ width: 10em;
+ margin-left: 1em;
+ padding: 7px 14px;
+ border: none;
+ border-radius: 2px;
+ background-color: #f2e0ff;
+ margin-bottom: 1.5em;
+}
+.person input{
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 10em;
+  height: 16px;
+  color: #5e5e5e;
+  border-style: solid;
 }
