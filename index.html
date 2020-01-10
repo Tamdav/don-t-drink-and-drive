@@ -21,6 +21,7 @@
 
 
   <section id = "info">
+
     <nav id = "info-nav">
     <!--<ul class = "info-nav-ul">
         <li><a href="#erklärung">Warum Promille rechner?</a></li>
@@ -30,7 +31,7 @@
     </nav>
     <div class = "info-inhalt">
       <section id = "erklärung">
-        <h4>Warum ein Promille-Rechner? </h4>
+        <h3>Warum ein Promille-Rechner? </h3>
         <p>Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
         Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
         und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
@@ -40,7 +41,7 @@
       </section>
 
       <section id = "mathe-beruendungg">
-        <h4>Wie Promille Berechnen? </h4>
+        <h3>Wie Promille Berechnen? </h3>
         <p>Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
         Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
         und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
@@ -48,7 +49,7 @@
       </section>
 
       <section id = "erklärung">
-        <h4>Disclaimar</h4>
+        <h3>Disclaimar</h3>
         <p> Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
           verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll konsumirt werden und Maßen. </p>
       </section>
@@ -59,21 +60,34 @@
 
   <section id="berechnen">
     <div class ="daten-container">
-      <div class = "person">
-      <h4> Angabe zur Person </h4>
-      <p>Geschlecht:<p>
-      <form action = "/script.js">
-        <select name="geschlecht">
-          <option value ="weiblich">weiblich</option>
-          <option value ="männlich">männlich</option>
-          <option value ="keine Angabe">keine angabe</option>
-        </select>
-        <input type = "text" name = "groesse" value = "Körpergröße">
-        <input type = "text" name = "gewicht" value = "Körpergewicht">
-      </form>
+      <div class = "person-daten">
+        <h4> Angabe zur Person </h4>
+        <p>Geschlecht:<p>
+        <form action = "/script.js">
+          <select name="geschlecht">
+            <option value ="weiblich">weiblich</option>
+            <option value ="männlich">männlich</option>
+            <option value ="keine Angabe">keine angabe</option>
+          </select>
+          <input type = "text" name = "groesse" value = "Körpergröße">
+          <input type = "text" name = "gewicht" value = "Körpergewicht">
+        </form>
+      </div>
+      <div class= "zeit-daten">
+        <h4>Zeitangaben</h4>
+        <form action = "/script.js">
+          <p>Trink-Start:</p>
+          <input type="time" name = "start" value = "20:00:00">
+          <p>Trink-Ende:</p>
+          <input type="time" name="ende" value="00:00:00">
+      </div>
+      <div class="drinks-daten">
+       <h4>Konsumierte Getränke</h4>
+         <form action="/script.js">
+           <p id="getraenk-nr">Getränk x:</label>
+           <select id="getraenke-liste" size="5"></select>
+      </div>
     </div>
-
-  </div>
   </section>
 
   <section id="ergebnis">

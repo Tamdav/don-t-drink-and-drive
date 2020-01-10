@@ -12,21 +12,21 @@ h1{
   color:#25A079;
 }
 
+h2{
+  color:#25A079;
+}
+
 h3{
   color:#25A079;
 }
 
-h4{
-  color: #4b7a67;
-}
 
-.person h4{
+h4{
   color: #1f1f1f;
   margin-left: 2em;
-
 }
 
-.person p{
+.person-daten p{
   color: #1f1f1f;
   font-size: 12px;
   margin-left: 1em;
@@ -91,10 +91,12 @@ li a {
   margin: 2em;
   padding: 10;
   position: static;
+  height: 80%;
+  width: 60%;
 }
 
 .info-inhalt p{
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   margin-top: 0em;
   margin-bottom: 1em;
@@ -106,30 +108,61 @@ li a {
   display: grid;
   height: auto;
   align-content: center;
-  grid-template-columns: 12em 35em 40em;
+  grid-template-columns: 12em 12em 40em;
   grid-gap: 10px;
 }
-.person{
+
+.person-daten{
   height: auto;
-  background-color: #f0eeeb;
+  background-color: #ebc0ce;
   background-blend-mode: lighten;
   border-radius: 1em;
 }
 
-.person select{
+.person-daten select{
  width: 10em;
  margin-left: 1em;
  padding: 7px 14px;
  border: none;
  border-radius: 2px;
- background-color: #f2e0ff;
+ background-color: #ffffff;
  margin-bottom: 1.5em;
 }
-.person input{
+
+input{
   margin-left: 1em;
   margin-bottom: 1em;
-  width: 10em;
-  height: 16px;
+  width: 8em;
+  height: 18px;
   color: #5e5e5e;
   border-style: solid;
+  border-radius: 5px;
+}
+
+.zeit-daten{
+  height: auto;
+  width: 10em;
+  margin-left: 1em;
+  border: none;
+  border-radius: 1em;
+  background-color:#d9c3cb;
+}
+
+
+.zeit-daten p{
+  font-size: 12px;
+  margin-left: 1em;
+}
+
+.drinks-daten{
+  height: auto;
+  width: 35em;
+  margin-left: 1em;
+  border: none;
+  border-radius: 1em;
+  background-color:#f5e4ea;
+}
+
+.drinks-daten h4{
+  margin-left: 13em;
 }
