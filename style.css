@@ -3,9 +3,24 @@
   font-weight: normal;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
 body {
   background-color: #fcfcfc;
   background-blend-mode: darken;
+}
+
+header{
+  background-color: inherit;
+  width: 100%;
 }
 
 h1{
@@ -90,7 +105,7 @@ li a {
 .info-inhalt {
   margin: 2em;
   padding: 10;
-  position: static;
+  position: inherit;
   height: 80%;
   width: 60%;
 }
@@ -110,6 +125,7 @@ li a {
   align-content: center;
   grid-template-columns: 12em 12em 40em;
   grid-gap: 10px;
+  position: inherit;
 }
 
 .person-daten{
