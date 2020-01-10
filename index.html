@@ -8,7 +8,7 @@
   </head>
 
 <body>
-  <header>
+  <header id ="my-header">
     <h1>Don't Drink and Drive - Promille Rechner</h1>
     <nav id = "main-nav">
       <ul class = "main-nav-ul">
@@ -109,5 +109,19 @@
     <p> Lorem Ipsum jfkösljghaöjgb </p>
   </section>
 
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("my-header");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
 </body>
 </html>
