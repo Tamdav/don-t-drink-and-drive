@@ -8,7 +8,7 @@
   </head>
 
 <body>
-  <header>
+  <header id ="my-header">
     <h1>Don't Drink and Drive - Promille Rechner</h1>
     <nav id = "main-nav">
       <ul class = "main-nav-ul">
@@ -21,13 +21,12 @@
 
 
   <section id = "info">
-
     <nav id = "info-nav">
-    <!--<ul class = "info-nav-ul">
+    <ul class = "info-nav-ul">
         <li><a href="#erklärung">Warum Promille rechner?</a></li>
         <li><a href="#mathe-beruendungg">Wie Promille rechnen?</a></li>
         <li><a href="#disclaimar">Disclaimar</a></li>
-      </ul> -->
+      </ul>
     </nav>
     <div class = "info-inhalt">
       <section id = "erklärung">
@@ -109,10 +108,27 @@
     <p> Lorem Ipsum jfkösljghaöjgb </p>
   </section>
 
+<<<<<<< HEAD
   <footer>
     <p>
       &copy; Gruppe ..
     </p>
   </footer>
+=======
+  <script>
+  window.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("my-header");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
+>>>>>>> 5d2041f44df3c936ed3d019168c76f4e6b3dc9b7
 </body>
 </html>

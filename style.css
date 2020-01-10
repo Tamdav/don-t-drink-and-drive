@@ -3,6 +3,15 @@
   font-weight: normal;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
 
 body {
   background-color: #fcfcfc;
@@ -12,13 +21,15 @@ body {
 
 header {
   background-color: #fcfcfc;
+<<<<<<< HEAD
   background-blend-mode: darken;
   position: relative;
+=======
+  width: 100%
+>>>>>>> 5d2041f44df3c936ed3d019168c76f4e6b3dc9b7
 }
-
 #info{
-  position: relative;
-  margin-top: 20em;
+  margin-top: 2em;
 }
 h1{
   color:#25A079;
@@ -101,7 +112,7 @@ li a {
 .info-inhalt {
   margin: 2em;
   padding: 10;
-  position: static;
+  position: inherit;
   height: 80%;
   width: 60%;
 }
@@ -121,6 +132,7 @@ li a {
   align-content: center;
   grid-template-columns: 12em 12em 40em;
   grid-gap: 10px;
+  position: inherit;
 }
 
 .person-daten{
