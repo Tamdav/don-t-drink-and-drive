@@ -3,7 +3,6 @@
   font-weight: normal;
 }
 
-<<<<<<< HEAD
 .sticky {
   position: fixed;
   top: 0;
@@ -13,33 +12,20 @@
 .sticky + .content {
   padding-top: 102px;
 }
-=======
->>>>>>> 2a61aae8e648d1b2763c8a297bcd11dc4c8c940b
 
 body {
   background-color: #fcfcfc;
   background-blend-mode: darken;
 }
 
-<<<<<<< HEAD
-header{
-  background-color: inherit;
-  width: 100%;
-}
-
-=======
 
 header {
   background-color: #fcfcfc;
-  background-blend-mode: darken;
-  position: fixed;
+  width: 100%
 }
-
 #info{
-  position: relative;
-  margin-top: 20em;
+  margin-top: 2em;
 }
->>>>>>> 2a61aae8e648d1b2763c8a297bcd11dc4c8c940b
 h1{
   color:#25A079;
 }
