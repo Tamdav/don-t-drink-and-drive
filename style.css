@@ -3,6 +3,7 @@
   font-weight: normal;
 }
 
+<<<<<<< HEAD
 .sticky {
   position: fixed;
   top: 0;
@@ -12,17 +13,33 @@
 .sticky + .content {
   padding-top: 102px;
 }
+=======
+>>>>>>> 2a61aae8e648d1b2763c8a297bcd11dc4c8c940b
 
 body {
   background-color: #fcfcfc;
   background-blend-mode: darken;
 }
 
+<<<<<<< HEAD
 header{
   background-color: inherit;
   width: 100%;
 }
 
+=======
+
+header {
+  background-color: #fcfcfc;
+  background-blend-mode: darken;
+  position: fixed;
+}
+
+#info{
+  position: relative;
+  margin-top: 20em;
+}
+>>>>>>> 2a61aae8e648d1b2763c8a297bcd11dc4c8c940b
 h1{
   color:#25A079;
 }
@@ -34,7 +51,6 @@ h2{
 h3{
   color:#25A079;
 }
-
 
 h4{
   color: #1f1f1f;

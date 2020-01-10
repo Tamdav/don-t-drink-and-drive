@@ -64,28 +64,42 @@
         <h4> Angabe zur Person </h4>
         <p>Geschlecht:<p>
         <form action = "/script.js">
-          <select name="geschlecht">
+          <select id ="geschlecht" name="geschlecht">
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
             <option value ="keine Angabe">keine angabe</option>
           </select>
-          <input type = "text" name = "groesse" value = "Körpergröße">
-          <input type = "text" name = "gewicht" value = "Körpergewicht">
+          <input id ="groesse" type = "text" name = "groesse" value = "Körpergröße">
+          <input id ="gewicht" type = "text" name = "gewicht" value = "Körpergewicht">
+          <input id ="alter" type ="text" name = "alter" value = "Alter">
         </form>
       </div>
       <div class= "zeit-daten">
         <h4>Zeitangaben</h4>
         <form action = "/script.js">
           <p>Trink-Start:</p>
-          <input type="time" name = "start" value = "20:00:00">
+          <input id ="anfang" type="time" name = "start" value = "20:00:00">
           <p>Trink-Ende:</p>
-          <input type="time" name="ende" value="00:00:00">
+          <input id ="ende" type="time" name="ende" value="00:00:00">
+        </form>
       </div>
       <div class="drinks-daten">
        <h4>Konsumierte Getränke</h4>
          <form action="/script.js">
            <p id="getraenk-nr">Getränk x:</label>
            <select id="getraenke-liste" size="5"></select>
+         </form>
+      </div>
+      <button id="plus-getraenk">+Getränk</button>
+      <div class="submit-dialog">
+        <form action="/script.js">
+          <input id ="check-disclaimar" type="checkbox">
+          <p>Ich stimme zu, dass die Informationen dieser Website
+          keinen falls dazu verwendet werden können,um zu
+          entscheiden ob jemand noch in der Lage ist ein
+          Fahrzeug zu führen oder nicht.<p>
+          <button id="berechne-daten">Berechnen</button>
+        </form>
       </div>
     </div>
   </section>
