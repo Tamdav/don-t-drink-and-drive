@@ -9,6 +9,17 @@ body {
   background-blend-mode: darken;
 }
 
+
+header {
+  background-color: #fcfcfc;
+  background-blend-mode: darken;
+  position: fixed;
+}
+
+#info{
+  position: relative;
+  margin-top: 20em;
+}
 h1{
   color:#25A079;
 }
