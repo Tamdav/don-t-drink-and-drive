@@ -5,14 +5,15 @@
 
 .body-wrapper {
   display: grid;
-  grid-template-rows: 10em 60% 70% 70%;
+  grid-template-rows: 10em 30em 40em 40em;
 }
 
 .header-container{
    grid-column:1;
    grid-row: 1;
    background-color: #fcfcfc;
-   width: 100%
+   top: 0;
+   width: 100%;
 }
 
 .info-container{
@@ -28,7 +29,7 @@
   display: grid;
   height: auto;
   align-content: center;
-  grid-template-columns: 12em 12em 40em;
+  grid-template-columns: 15em 15em 40em;
   grid-gap: 10px;
 }
 
@@ -36,17 +37,6 @@
   grid-column: 1;
   grid-row: 4;
   position: inherit;
-}
-
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky + .content {
-    padding-top: 102px;
 }
 
 body {
@@ -73,8 +63,8 @@ h4 {
 
 .person-daten p {
     color: #1f1f1f;
-    font-size: 12px;
-    margin-left: 1em;
+    font-size: 14px;
+    margin-left: 10px;
 }
 
 .main-nav-ul {
@@ -152,7 +142,7 @@ li a {
   }
 
 .person-daten {
-    height: 16em;
+    height: 25em;
     background-color: #e7b1c3;
     background-blend-mode: lighten;
     border-radius: 1em;
@@ -170,7 +160,7 @@ li a {
 
 input {
     margin-left: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 10px;
     width: 8em;
     height: 18px;
     color: #5e5e5e;
@@ -179,7 +169,7 @@ input {
 }
 
 .zeit-daten {
-    height: 10em;
+    height: 14em;
     width: 10em;
     margin-left: 1em;
     border: none;
@@ -189,7 +179,7 @@ input {
 
 
 .zeit-daten p {
-    font-size: 12px;
+    font-size: 14px;
     margin-left: 1em;
 }
 

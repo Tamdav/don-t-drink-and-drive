@@ -60,22 +60,22 @@
             </section>
             <div>
     </section>
-   
+
     <section id="berechnen" class="berechnen-container">
             <div class="person-daten">
                 <h4> Angabe zur Person </h4>
-                <p>Geschlecht:<p>
+                <p>Geschlecht:</p>
                      <select id ="geschlecht" name="geschlecht">
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
             <option value ="keine Angabe">keine angabe</option>
           </select>
-          <label for="groesse">Körpergröße in cm:</label>
-          <input id ="groesse" type = "number" min="70" max="300" value= "175">
-          <label for="gewicht">Körpergewicht in kg:</label>
-          <input id ="gewicht" type = "number" min="30" max="400" value="70">
-          <label for="alter">Alter in J:</label>
-          <input id ="alter" type = "number" min="10" max="150" value= "45">
+          <p>Körpergröße in cm:</p>
+          <input id ="groesse" type = "number" min="70" max="300" value= "175"/>
+          <p>Körpergewicht in kg:</p>
+          <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
+          <p for="alter">Alter in J:</p>
+          <input id ="alter" type = "number" min="10" max="150" value= "45"/>
             </div>
             <div class="zeit-daten">
                 <h4>Zeitangaben</h4>
@@ -121,116 +121,6 @@
     <section id="ergebnis" class="ergebnis-container">
       <h3>Ergebnis</h3>
     </section>
-
-    <script>
-        window.onscroll = function () { myFunction() };
-
-        var header = document.getElementById("myHeader");
-        var scrollpos = header.offsetTop;
-      
-        function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } 
-          else {
-            header.classList.remove("sticky");
-          }
-    
-          }
-
-  //-----------------------------///
-
-  // var Geschlecht_zeile document.getElementById("geschlecht");
-   var Geschlecht = "weiblich";// Geschlecht_zeile.options[Geschlecht_zeile.selectedIndex].text;
-
-   var Körpergröße = document.getElementById("groesse").value;
-   var Körpergewicht = document.getElementById("gewicht").value;
-   var Alter = document.getElementById("alter").value;
-  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
-  // var Trinkende = document.getElementById("ende").innerHTML;
-   var A = 0;
-  //
-  // var Tinkeende_hours = Trinkende.getHours();
-  // var Tinkeende_minutes = Trinkende.getMinutes();
-  //
-  // var Uhrzeit = new Date();
-  // var Uhrzeit_Hours = Uhrzeit.getHours()
-  // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
-
-  //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
-
-
-  function validate(){
-    is_checked();
-    check_all_values();
-
-    //A muss noch beachtet werden
-    //berechne();
-  }
-
-  //Check ob alle Daten vorhanden
-  function check_all_values(){
-
-    is_valid(Körpergröße);
-    is_valid(Körpergewicht);
-    is_valid(Alter);
-  }
-
-  function is_valid(Feld){
-    if (Feld.innerHTML == ""){
-      alert("Bitte fülle das Feld aus: " + Feld);
-      exit();
-    }
-  }
-
-   function is_checked(){
-     var Checkbox =  document.getElementById("checkDisclaimar");
-     if (Checkbox.checked == false){
-       alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
-       exit();
-     }
-   }
-   // Berechnungen
-
-   function berechne(){
-       var GKW;
-       alert("start berechne");
-       if(Geschlecht == "weiblich"){
-         alert("abfrage ob weiblich");
-         GKW = berechne_GKW_Frau(A);
-       }
-       if(Geschlecht == "männlich"){
-         alert("abfrage ob männlich");
-         GKW = berechne_GKW_Mann(A);
-       }
-
-      alert("berechne BAK");
-       var BAK_Anfangswert = berechne_BAK(A, GKW);
-      // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
-
-      alert("GKW: " + GKW);
-      alert("BAK: " + BAK_Anfangswert);
-     }
-     //Berechnung der Tatsächlichen Werte nach dem Trinken
-     function berechne_GKW_Frau (A){
-       alert("GKW FRAU");
-        var GKW = -2,097 + 0,1069 * Körpergröße + 0,2466 * Körpergewicht;
-        return GKW;
-     }
-
-     function berechne_GKW_Mann(A){
-       alert("GKW Mann");
-       var GKW = 2,447 - 0,09516 * Alter + 0,1074 * Körpergröße + 0,3362 * Körpergewicht;
-       return GKW;
-     }
-
-     function berechne_BAK(A,GKW){
-       alert("berechne BAK Function")
-       return (0,8 * A) / GKW;
-     }
-  }
-
-  </script>
   </div>
 </body>
 </html>
