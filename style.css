@@ -129,7 +129,7 @@ li a {
 }
 
 .person-daten{
-  height: auto;
+  height: 16em;
   background-color: #ebc0ce;
   background-blend-mode: lighten;
   border-radius: 1em;
@@ -156,7 +156,7 @@ input{
 }
 
 .zeit-daten{
-  height: auto;
+  height: 10em;
   width: 10em;
   margin-left: 1em;
   border: none;
@@ -181,4 +181,26 @@ input{
 
 .drinks-daten h4{
   margin-left: 13em;
+}
+
+#metrik{
+  width: 6em;
+  margin-left: 1em;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-bottom: 1.5em;
+}
+
+#menge{
+  width:6em;
+  height:24px;
+}
+#getraenkeListe{
+  margin: 10px;
+}
+
+#plusGetraenk{
+
 }
