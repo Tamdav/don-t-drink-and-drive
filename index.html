@@ -2,7 +2,7 @@
 <html>
   <head>
   <title>PromilleRechner</title>
-    <script type="text/javascript" src="script.js" async></script>
+
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
@@ -40,7 +40,7 @@
           Auswirkungen auf den Menschlichen Körper zu erlangen.</p>
       </section>
 
-      <section id = "mathe-beruendungg">
+      <section id = "mathe-beruendung">
         <h3>Wie Promille Berechnen? </h3>
         <p>Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
         Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
@@ -62,30 +62,31 @@
     <div class ="daten-container">
       <div class = "person-daten">
         <h4> Angabe zur Person </h4>
-        <p>Geschlecht:<p>
-        <form action = "script.js">
+        <p>Geschlecht:</p>
           <select id ="geschlecht" name="geschlecht">
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
             <option value ="keine Angabe">keine angabe</option>
           </select>
-          <input id ="groesse" type = "text" name = "groesse" value = "Körpergröße">
-          <input id ="gewicht" type = "text" name = "gewicht" value = "Körpergewicht">
-          <input id ="alter" type ="text" name = "alter" value = "Alter">
-        </form>
+          <label for="groesse">Körpergröße in cm</label>
+          <input id ="groesse" type = "number" min="70" max="300" value= "175">
+          <label for="gewicht">Körpergewicht in kg</label>
+          <input id ="gewicht" type = "number" min="30" max="400" value="70">
+          <label for="alter">Alter in J</label>
+          <input id ="alter" type = "number" min="10" max="150" value= "45">
       </div>
       <div class= "zeit-daten">
         <h4>Zeitangaben</h4>
-        <form action = "script.js">
+        <form>
           <p>Trink-Start:</p>
           <input id ="anfang" type="time" name = "start" value = "20:00:00">
-          <!--<p>Trink-Ende:</p>
-          <input id ="ende" type="time" name="ende" value="00:00:00">-->
+          <p>Trink-Ende:</p>
+          <input id ="ende" type="time" name="ende" value="00:00:00">
         </form>
       </div>
       <div class="drinks-daten">
        <h4>Konsumierte Getränke</h4>
-       <form action="script.js">
+       <form>
         <section id="getraenke">
 
            <p id="getraenkNr">Getränk x:</p>
@@ -94,21 +95,21 @@
            <label>Menge:</label>
              <input id="menge" type="number" min="0" value="0">
              <select id="metrik" name="metrik">
-               <option value="ml" id="ml">ml</option>
-               <option value="cl" id="cl">cl</option>
-               <option id="l" value="l" >l</option>
+               <option placeholder="ml" id="ml">ml</option>
+               <option placeholder="cl" id="cl">cl</option>
+               <option id="l" placeholder="l" >l</option>
             </section>
           </div>
           <button id="plusGetraenk">+Getränk</button>
          </form>
          <div class="submit-dialog">
-            <form action="script.js">
+            <form>
              <input id ="checkDisclaimar" type="checkbox">
              <p>Ich stimme zu, dass die Informationen dieser Website
              keinen falls dazu verwendet werden können,um zu
              entscheiden ob jemand noch in der Lage ist ein
              Fahrzeug zu führen oder nicht.<p>
-             <button id="berechneDaten">Berechnen</button>
+             <button id="berechneDaten" onclick="validate()">Berechnen</button>
            </form>
           </div>
         </div>
@@ -133,6 +134,99 @@
       header.classList.remove("sticky");
     }
   }
+
+  //-----------------------------///
+
+  // var Geschlecht_zeile document.getElementById("geschlecht");
+   var Geschlecht = "weiblich";// Geschlecht_zeile.options[Geschlecht_zeile.selectedIndex].text;
+
+   var Körpergröße = document.getElementById("groesse").value;
+   var Körpergewicht = document.getElementById("gewicht").value;
+   var Alter = document.getElementById("alter").value;
+  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
+  // var Trinkende = document.getElementById("ende").innerHTML;
+   var A = 0;
+  //
+  // var Tinkeende_hours = Trinkende.getHours();
+  // var Tinkeende_minutes = Trinkende.getMinutes();
+  //
+  // var Uhrzeit = new Date();
+  // var Uhrzeit_Hours = Uhrzeit.getHours()
+  // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
+
+  //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
+
+
+  function validate(){
+    is_checked();
+    check_all_values();
+
+    //A muss noch beachtet werden
+    //berechne();
+  }
+
+  //Check ob alle Daten vorhanden
+  function check_all_values(){
+
+    is_valid(Körpergröße);
+    is_valid(Körpergewicht);
+    is_valid(Alter);
+  }
+
+  function is_valid(Feld){
+    if (Feld.innerHTML == ""){
+      alert("Bitte fülle das Feld aus: " + Feld);
+      exit();
+    }
+  }
+
+   function is_checked(){
+     var Checkbox =  document.getElementById("checkDisclaimar");
+     if (Checkbox.checked == false){
+       alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
+       exit();
+     }
+   }
+   // Berechnungen
+
+   function berechne(){
+       var GKW;
+       alert("start berechne");
+       if(Geschlecht == "weiblich"){
+         alert("abfrage ob weiblich");
+         GKW = berechne_GKW_Frau(A);
+       }
+       if(Geschlecht == "männlich"){
+         alert("abfrage ob männlich");
+         GKW = berechne_GKW_Mann(A);
+       }
+
+      alert("berechne BAK");
+       var BAK_Anfangswert = berechne_BAK(A, GKW);
+      // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
+
+      alert("GKW: " + GKW);
+      alert("BAK: " + BAK_Anfangswert);
+     }
+     //Berechnung der Tatsächlichen Werte nach dem Trinken
+     function berechne_GKW_Frau (A){
+       alert("GKW FRAU");
+        var GKW = -2,097 + 0,1069 * Körpergröße + 0,2466 * Körpergewicht;
+        return GKW;
+     }
+
+     function berechne_GKW_Mann(A){
+       alert("GKW Mann");
+       var GKW = 2,447 - 0,09516 * Alter + 0,1074 * Körpergröße + 0,3362 * Körpergewicht;
+       return GKW;
+     }
+
+     function berechne_BAK(A,GKW){
+       alert("berechne BAK Function")
+       return (0,8 * A) / GKW;
+     }
+  }
+
   </script>
 </body>
 </html>
