@@ -10,7 +10,6 @@
 
 <body>
   <div class = "body-wrapper">
-
     <header id="myHeader" class = "header-container">
         <h1>Don't Drink and Drive - Promille Rechner</h1>
         <nav id="main-nav">
@@ -21,8 +20,6 @@
             </ul>
         </nav>
     </header>
-
-
     <section id="info" class="info-container">
         <nav id="info-nav">
             <ul class="info-nav-ul">
@@ -63,11 +60,7 @@
             </section>
             <div>
     </section>
-
-
-
     <section id="berechnen" class="berechnen-container">
-        <div class="daten-container">
             <div class="person-daten">
                 <h4> Angabe zur Person </h4>
                 <p>Geschlecht:<p>
@@ -84,52 +77,47 @@
             </div>
             <div class="zeit-daten">
                 <h4>Zeitangaben</h4>
-                <form action="script.js">
                     <p>Trink-Start:</p>
                     <input id="anfang" type="time" name="start" value="20:00:00">
                     <!--<p>Trink-Ende:</p>
                     <input id ="ende" type="time" name="ende" value="00:00:00">-->
-                </form>
             </div>
             <div class="drinks-daten-container">
-                <form action="script.js">
-                    <div id="drinks-header">
+                    <div class="drinks-header">
                         <h4>Konsumierte Getränke</h4>
                     </div>
-                    <div id="drinks-listen">
-                        <div id="drinks-liste">
+                    <div id="drinks-listen" class="drinks-listen-container">
+                        <div id="drinks-liste" class="drinks-liste-container">
                           <p id="getraenkNr">Getränk x:</p>
                           <select id="getraenkeListe" size="5"></select>
                         </div>
-                        <div id="mengenAngabe">
+                        <div id="mengenAngabe" class="mengen-container">
                             <label>Menge:</label>
-                            <input id="menge" type="number" min="0" value="0">
+                            <input id="menge" type="number" min="0" value="0"/>
                             <select id="metrik" name="metrik">
                                 <option value="ml" id="ml">ml</option>
                                 <option value="cl" id="cl">cl</option>
                                 <option id="l" value="l">l</option>
-
+                           </select>
                         </div>
                     </div>
-                    <div id="event-dialog">
-
-                        <p>
-                            Ich stimme zu, dass die Informationen dieser Website
-                            keinen falls dazu verwendet werden können,um zu
-                            entscheiden ob jemand noch in der Lage ist ein
-                            Fahrzeug zu führen oder nicht.
-                        </p>
-                        <button id="berechneDaten">Berechnen</button>
-
+                    <div class="plusGetraenk-container">
+                      <button id="plusGetraenk">+ Getränk</button>
                     </div>
+                    <div class="submit-dialog">
+                      <label id="checkBoxLabel">
+                        <input type="checkbox" id ="checkDisclaimar" name="readDisclamar" value="Read"/>
+                        Ich stimme zu, dass die Informationen dieser Website
+                        keinen falls dazu verwendet werden können,um zu
+                        entscheiden ob jemand noch in der Lage ist ein
+                        Fahrzeug zu führen oder nicht.</label>
+                        </br>
+                        <button id="berechneDaten">Berechnen</button>
+                     </div>
             </div>
-            </form>
-        </div>
     </section>
-
     <section id="ergebnis" class="ergebnis-container">
-        <h3> Ergebnis </h3>
-        <p> Lorem Ipsum jfkösljghaöjgb </p>
+      <h3>Ergebnis</h3>
     </section>
 
     <script>

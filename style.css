@@ -3,9 +3,9 @@
     font-weight: normal;
 }
 
-.body-wrapper{
+.body-wrapper {
   display: grid;
-  grid-template-rows: 10em 70% 80% 80%;
+  grid-template-rows: 10em 60% 70% 70%;
 }
 
 .header-container{
@@ -26,12 +26,16 @@
   grid-column: 1;
   grid-row: 3;
   display: grid;
-  grid-template-columns: 20em 60em;
+  height: auto;
+  align-content: center;
+  grid-template-columns: 12em 12em 40em;
+  grid-gap: 10px;
 }
 
 .ergebnis-container{
   grid-column: 1;
   grid-row: 4;
+  position: inherit;
 }
 
 
@@ -92,13 +96,13 @@ li1 {
     float: left;
 }
 
-    li1 a {
-        display: block;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        color: #3D4F49;
-    }
+li1 a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #3D4F49;
+}
 /* Change the link color to #111 (black) on hover */
 
 .active {
@@ -147,31 +151,22 @@ li a {
       margin-right: 10;
   }
 
-.daten-container {
-    display: grid;
-    height: auto;
-    align-content: center;
-    grid-template-columns: 12em 12em 40em;
-    grid-gap: 10px;
-    position: inherit;
-}
-
 .person-daten {
     height: 16em;
-    background-color: #ebc0ce;
+    background-color: #e7b1c3;
     background-blend-mode: lighten;
     border-radius: 1em;
 }
 
-    .person-daten select {
-        width: 10em;
-        margin-left: 1em;
-        padding: 7px 14px;
-        border: none;
-        border-radius: 2px;
-        background-color: #ffffff;
-        margin-bottom: 1.5em;
-    }
+.person-daten select {
+    width: 10em;
+    margin-left: 1em;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin-bottom: 1.5em;
+}
 
 input {
     margin-left: 1em;
@@ -189,49 +184,74 @@ input {
     margin-left: 1em;
     border: none;
     border-radius: 1em;
-    background-color: #d9c3cb;
+    background-color: #edc5d2;
 }
 
 
-    .zeit-daten p {
-        font-size: 12px;
-        margin-left: 1em;
-    }
+.zeit-daten p {
+    font-size: 12px;
+    margin-left: 1em;
+}
 
 .drinks-daten-container {
-    height: auto;
-    width: 35em;
+    width: 40em;
     margin-left: 1em;
     border: none;
     border-radius: 1em;
-    background-color: #f5e4ea;
+    background-color: #f3d8e1;
     display: grid;
-    grid-template-rows: 4em auto 20em;
-    grid-gap: 1em;
+    grid-template-rows: 3em 15em 3em 9em;
+    grid-gap: 0em;
     position: inherit;
+    height: auto;
 }
 
-#drinks-header {
+.drinks-header {
     margin-left: 10em;
+    grid-column: 1;
+    grid-row: 1;
 }
 
-#drinks-listen {
-    margin-left: 1em;
-    display: grid;
-    grid-template-rows: 10em 7em;
-    grid-row-start: inherit;
-    grid-gap: 8px;
-    margin-bottom: 1em;
+.drinks-listen-container {
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 1em;
+  display: grid;
+  grid-template-rows: 10em 5em;
+  grid-row-start: inherit;
+  grid-gap: 8px;
 }
 
-#getraenkNr{
-  margin: 10px;
+.plusGetraenk-container {
+  background-color: 	 #ffcccc;
+  grid-column: 1;
+  grid-row: 3;
+  padding-left: 1em;
+  border-radius: 10px;
 }
-#drinks-liste{
+
+.submit-dialog {
+  padding-top:1em;
+  grid-column: 1;
+  grid-row: 4;
+  padding-left: 1em;
+  padding-bottom: 2em;
+  background-color: #f9ebf0;
+  border-top: 1em;
+  border-radius: 1em;
+
+}
+
+.drinks-liste-container{
   display: grid;
   grid-template-rows: 20px 8em;
 }
 
+#getraenkNr{
+  margin: 10px;
+  grid-column: 1;
+  grid-row: 1;
+}
 #mengenAngabe{
   margin: 10px;
 }
@@ -243,7 +263,7 @@ input {
     border: none;
     border-radius: 2px;
     background-color: #ffffff;
-    margin-bottom: 1.5em;
+    margin-right: 26em;
 }
 
 #menge {
@@ -256,9 +276,26 @@ input {
     height: 10em;
 }
 
-#event-dialog {
-  margin: 2em;
-  display:grid;
-  grid-template-rows: 7em 15em 7em;
-  position: inherit;
+#checkBoxLabel {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+#checkDisclaimar{
+  padding: 2px;
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
+
+button {
+  height: 2em;
+  width: 100px;
+  margin-top: 1em;
 }
