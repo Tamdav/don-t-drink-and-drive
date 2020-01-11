@@ -83,7 +83,7 @@
                     <p>Trink-Ende:</p>
                     <input id ="ende" type="time" name="ende" value="00:00:00">
             </div>
-            <div class="drinks-daten-container">
+            <div id="duplication_model" class="drinks-daten-container">
                     <div class="drinks-header">
                         <h4>Konsumierte Getränke</h4>
                     </div>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="plusGetraenk-container">
-                      <button id="plusGetraenk">+ Getränk</button>
+                      <button id="plusGetraenk" onclick="duplicate()">+ Getränk</button>
                     </div>
                     <div class="submit-dialog">
                       <label id="checkBoxLabel">
@@ -140,9 +140,7 @@
 
   //-----------------------------///
 
-  // var Geschlecht_zeile document.getElementById("geschlecht");
-   var Geschlecht = "weiblich";// Geschlecht_zeile.options[Geschlecht_zeile.selectedIndex].text;
-
+   var Geschlecht = "weiblich";
    var Körpergröße = document.getElementById("groesse").value;
    var Körpergewicht = document.getElementById("gewicht").value;
    var Alter = document.getElementById("alter").value;
@@ -151,6 +149,9 @@
    var A = 0;
    var GKW = 0;
    var BAK_Anfangswer = 0;
+
+   var newId = 0;
+   var clone;
   //
   // var Tinkeende_hours = Trinkende.getHours();
   // var Tinkeende_minutes = Trinkende.getMinutes();
@@ -161,6 +162,18 @@
 
   //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
 
+
+
+function duplicate(){
+  let clone = document.querySelector('#duplication_model').cloneNode( true );
+
+  // Change the id attribute of the newly created element:
+  clone.setAttribute( 'id', ++newId );
+
+  // Append the newly created element on element p
+  document.querySelector('#duplication_model').appendChild( clone );
+
+}
 
   function validate(){
     is_checked();
@@ -195,8 +208,6 @@
    // Berechnungen
 
    function berechne(){
-
-      alert("start berechne");
      if(Geschlecht == "weiblich"){
        berechne_GKW_Frau();
      }
