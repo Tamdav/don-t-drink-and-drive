@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html>
+
   <head>
   <title>PromilleRechner</title>
-    <script src="script.js" async></script>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
+    <script src="script.js"></script>
+</head>
 
 <body>
-  <header id ="my-header">
-    <h1>Don't Drink and Drive - Promille Rechner</h1>
-    <nav id = "main-nav">
-      <ul class = "main-nav-ul">
-        <li1><a href="#info">Info</a></li1>
-        <li1><a href="#berechnen">Berechnen</a></li1>
-        <!--<li1><a href="#ergebnis">Ergebnis</a></li1>-->
-      </ul>
-    </nav>
-  </header>
 
+    <header>
+        <h1>Don't Drink and Drive - Promille Rechner</h1>
+        <nav id="main-nav">
+            <ul class="main-nav-ul">
+                <li1><a href="#info">Info</a></li1>
+                <li1><a href="#berechnen">Berechnen</a></li1>
+                <li1><a href="#ergebnis">Ergebnis</a></li1>
+            </ul>
+        </nav>
+    </header>
+  <div class = "body-wrapper">
+    <section id="info" class="info-container">
+        <nav id="info-nav">
+            <ul class="info-nav-ul">
+                <li><a href="#erklärung">Warum Promille rechner?</a></li>
+                <li><a href="#mathe-beruendung">Wie Promille rechnen?</a></li>
+                <li><a href="#disclaimar">Disclaimar</a></li>
+            </ul>
+        </nav>
+        <div class="info-inhalt-container">
+            <section id="erklärung">
+                <h3>Warum ein Promille-Rechner? </h3>
+                <p>
+                    Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
+                    Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
+                    und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
+                    zu erzielen wird aber zumindest der Start-Zeitpunkt des Alkohol-Konsums benötigt. </br>
+                    Die Berechnungen auf dieser Seite sollen dazu Beitragen ein besseres Verständnis für Alkohol und seine
+                    Auswirkungen auf den Menschlichen Körper zu erlangen.
+                </p>
+            </section>
 
-  <section id = "info">
-    <nav id = "info-nav">
-    <ul class = "info-nav-ul">
-        <li><a href="#erklärung">Warum Promille rechner?</a></li>
-        <li><a href="#mathe-beruendungg">Wie Promille rechnen?</a></li>
-        <li><a href="#disclaimar">Disclaimar</a></li>
-      </ul>
-    </nav>
-    <div class = "info-inhalt">
-      <section id = "erklärung">
-        <h3>Warum ein Promille-Rechner? </h3>
-        <p>Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
-        Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
-        und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
-        zu erzielen wird aber zumindest der Start-Zeitpunkt des Alkohol-Konsums benötigt. </br>
-        Die Berechnungen auf dieser Seite sollen dazu Beitragen ein besseres Verständnis für Alkohol und seine
-          Auswirkungen auf den Menschlichen Körper zu erlangen.</p>
-      </section>
+            <section id="mathe-beruendungg">
+                <h3>Wie Promille Berechnen? </h3>
+                <p>
+                    Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
+                    Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
+                    und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
+                    zu erzielen wird aber zumindest der Start-Zeitpunkt des Alkohol-Konsums benötigt.
+                </p>
+            </section>
 
-      <section id = "mathe-beruendungg">
-        <h3>Wie Promille Berechnen? </h3>
-        <p>Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
-        Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
-        und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
-        zu erzielen wird aber zumindest der Start-Zeitpunkt des Alkohol-Konsums benötigt. </p>
-      </section>
+            <section id="disclaimar">
+                <h3>Disclaimar</h3>
+                <p>
+                    Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
+                    verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll konsumirt werden und Maßen.
+                </p>
+            </section>
+            <div>
+    </section>
 
-      <section id = "erklärung">
-        <h3>Disclaimar</h3>
-        <p> Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
-          verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll konsumirt werden und Maßen. </p>
-      </section>
-    <div>
-  </section>
-
-
-
-  <section id="berechnen">
-    <div class ="daten-container">
-      <div class = "person-daten">
-        <h4> Angabe zur Person </h4>
-        <p>Geschlecht:<p>
-        <form action = "/script.js">
-          <select id ="geschlecht" name="geschlecht">
+    <section id="berechnen" class="berechnen-container">
+            <div class="person-daten">
+                <h4> Angabe zur Person </h4>
+                <p>Geschlecht:</p>
+                     <select id ="geschlecht" name="geschlecht">
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
-            <option value ="keine Angabe">keine angabe</option>
           </select>
+          <p>Körpergröße in cm:</p>
+          <input id ="groesse" type = "number" min="70" max="300" value= "175"/>
+          <p>Körpergewicht in kg:</p>
+          <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
+          <p>Alter in J:</p>
+          <input id ="alter" type = "number" min="10" max="150" value= "45"/>
+            </div>
+            <div class="zeit-daten">
+                <h4>Zeitangaben</h4>
+                    <p>Trink-Start:</p>
+                    <input id="anfang" type="time" name="start" value="20:00:00">
+                    <p>Trink-Ende:</p>
+                    <input id ="ende" type="time" name="ende" value="00:00:00">
+            </div>
+            <div class="drinks-daten-container">
+                    <div class="drinks-header">
+                        <h4>Konsumierte Getränke</h4>
+                        <p id="demo"></p>
+                    </div>
+                    <div id="drinks-listen" class="drinks-listen-container">
+                        <div id="drinks-liste" class="drinks-liste-container">
+                          <p id="getraenkNr" onshow="getGetraenkNr()"></p>
+                          <select id="getraenkeListe" size="5"></select>
+                        </div>
+                        <div id="mengenAngabe" class="mengen-container">
+                            <label>Menge:</label>
+                            <input id="menge" type="number" min="0" value="0"/>
+                            <select id="metrik" name="metrik">
+                                <option value="ml" id="ml">ml</option>
+                                <option value="cl" id="cl">cl</option>
+                                <option id="l" value="l">l</option>
+                           </select>
+                        </div>
+
+                    </div>
+                    <div class="plusGetraenk-container">
+                      <button id="plusGetraenk" onclick="HelloWorld()">+ Getränk</button>
+                    </div>
+                    <div class="submit-dialog">
+                      <label id="checkBoxLabel">
+                        <input type="checkbox" id ="checkDisclaimar" name="readDisclamar" value="Read"/>
+                        Ich stimme zu, dass die Informationen dieser Website
+                        keinen falls dazu verwendet werden können,um zu
+                        entscheiden ob jemand noch in der Lage ist ein
+                        Fahrzeug zu führen oder nicht.
+                        </br>
+                        </label>
+                        <button id="berechneDaten" onclick="validate()">Berechnen</button>
+                     </div>
+            </div>
+    </section>
+    <section id="ergebnis" class="ergebnis-container">
+      <h3>Ergebnis</h3>
+    </section>
+  </div>
           <input id ="groesse" type = "text" name = "groesse" value = "Körpergröße">
           <input id ="gewicht" type = "text" name = "gewicht" value = "Körpergewicht">
           <input id ="alter" type ="text" name = "alter" value = "Alter">
@@ -108,27 +165,6 @@
     <p> Lorem Ipsum jfkösljghaöjgb </p>
   </section>
 
-<<<<<<< HEAD
-  <footer>
-    <p>
-      &copy; Gruppe ..
-    </p>
-  </footer>
-=======
-  <script>
-  window.onscroll = function() {myFunction()};
 
-  var header = document.getElementById("my-header");
-  var sticky = header.offsetTop;
-
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-  </script>
->>>>>>> 5d2041f44df3c936ed3d019168c76f4e6b3dc9b7
 </body>
 </html>
