@@ -1,24 +1,301 @@
-ul{
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    background-color: indianred;
+* {
+    font-family: arial;
+    font-weight: normal;
 }
 
-li{
-    float:left;
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fcfcfc;
 }
 
-li a{
+.body-wrapper {
+  display: grid;
+  grid-template-rows: 30em 70em 60em;
+  margin-left: 2em;
+}
+
+.info-container{
+  padding-top: 130px;
+  margin-top: 60px;
+  grid-column:1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 20em 50em;
+  grid-gap: 1em;
+
+}
+
+.berechnen-container{
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  height: auto;
+  align-content: center;
+  grid-template-columns: 15em 15em 40em;
+  grid-gap: 10px;
+}
+
+.ergebnis-container{
+  padding-top: 130px;
+  margin-top: 60px;
+  grid-column: 1;
+  grid-row: 3;
+  position: inherit;
+}
+
+body {
+    background-color: #fcfcfc;
+    background-blend-mode: darken;
+    margin: 0;
+}
+
+h1 {
+    color: #25A079;
+}
+
+h2 {
+    color: #25A079;
+}
+
+h3 {
+    color: #25A079;
+}
+
+h4 {
+    color: #1f1f1f;
+    margin-left: 2em;
+}
+
+.person-daten p {
+    color: #1f1f1f;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.main-nav-ul {
+    list-style-type: none;
+    border-style: none none solid;
+    color: #3D4F49;
+    width: 100%;
+    border-color: #A8D6C6;
+    overflow: hidden;
+}
+
+li1 a:hover {
+    background-color: #cbe7dd;
+}
+
+li1 {
+    float: left;
+}
+
+li1 a {
     display: block;
-    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color: #3D4F49;
+}
+.active {
+    background-color: #63b699;
 }
 
-li a:hover{
-    background-color: #cd5c5c;
+.info-nav-ul {
+    margin-left: 1em;
+    margin-right: 2em;
+    padding: 0;
+    grid-column: 1;
+    list-style-type: none;
+    background-color: #c6ecd9;
 }
 
+li a:hover {
+    background-color: #ecf9f2;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+li a {
+    display: block;
+    text-align: left;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #3D4F49;
+}
+
+.info-inhalt {
+    padding-top: 130px;
+    margin-top: 60px;
+    grid-column: 2;
+    padding: 10em;
+    width: 40em;
+    height: 80em;
+}
+
+  .info-inhalt p {
+      font-size: 16px;
+      display: block;
+  }
+
+.person-daten {
+    height: 25em;
+    background-color: #e7b1c3;
+    background-blend-mode: lighten;
+    border-radius: 1em;
+}
+
+.person-daten select {
+    width: 10em;
+    margin-left: 1em;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin-bottom: 1.5em;
+}
+
+input {
+    margin-left: 1em;
+    margin-bottom: 10px;
+    width: 8em;
+    height: 18px;
+    color: #5e5e5e;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.zeit-daten {
+    height: 14em;
+    width: 10em;
+    margin-left: 1em;
+    border: none;
+    border-radius: 1em;
+    background-color: #edc5d2;
+}
+
+
+.zeit-daten p {
+    font-size: 14px;
+    margin-left: 1em;
+}
+
+.drinks-daten-container {
+    width: 40em;
+    margin-left: 1em;
+    border: none;
+    border-radius: 1em;
+    background-color: #f3d8e1;
+    display: grid;
+    grid-template-rows: 3em 15em 5em 10em;
+    grid-gap: 0em;
+    position: inherit;
+    height: auto;
+}
+
+.drinks-header {
+    margin-left: 10em;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.drinks-listen-container {
+  grid-column: 1;
+  grid-row: 2;
+  margin-left: 1em;
+  display: grid;
+  grid-template-rows: 10em 5em;
+  grid-row-start: inherit;
+  grid-gap: 8px;
+}
+
+.plusGetraenk-container {
+  background-color: 	 #ffcccc;
+  grid-column: 1;
+  grid-row: 3;
+  padding-left: 1em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.submit-dialog {
+  padding-top:1em;
+  grid-column: 1;
+  grid-row: 4;
+  padding-left: 1em;
+  padding-bottom: 2em;
+  background-color: #ffe6e6;
+  border-top: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+
+}
+
+.drinks-liste-container{
+  display: grid;
+  grid-template-rows: 20px 8em;
+}
+
+#getraenkNr{
+  margin: 10px;
+  grid-column: 1;
+  grid-row: 1;
+}
+#mengenAngabe{
+  margin: 10px;
+}
+
+#metrik {
+    width: 6em;
+    margin-left: 1em;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ffffff;
+    margin-right: 26em;
+}
+
+#menge {
+    width: 6em;
+    height: 24px;
+}
+
+#getraenkeListe {
+    margin: 10px;
+    height: 10em;
+}
+
+#checkBoxLabel {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+#checkDisclaimar{
+  padding-top: 2px;
+  width: 13px;
+  border: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
+
+#plusGetraenk{
+  margin-top: 1em;
+}
+
+button {
+  height: 3em;
+  width: 100px;
+  border-radius: 7px;
+  font-size: 16px;
+  background-color: #666666;
+  border-style: none;
+  color:  #ffffff;
+}
+
+button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
