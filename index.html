@@ -89,7 +89,7 @@
                     </div>
                     <div id="drinks-listen" class="drinks-listen-container">
                         <div id="drinks-liste" class="drinks-liste-container">
-                          <p id="getraenkNr">Getränk x:</p>
+                          <p id="getraenkNr">Getränk:</p>
                           <select id="getraenkeListe" size="5"></select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
@@ -140,15 +140,14 @@
 
   //-----------------------------///
 
-   var Geschlecht = "weiblich";
+   var Geschlecht = document.getElementById("geschlecht").value;
    var Körpergröße = document.getElementById("groesse").value;
    var Körpergewicht = document.getElementById("gewicht").value;
    var Alter = document.getElementById("alter").value;
   // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
   // var Trinkende = document.getElementById("ende").innerHTML;
    var A = 0;
-   var GKW = 0;
-   var BAK_Anfangswer = 0;
+   var GKW = 0
 
    var newId = 0;
    var clone;
@@ -168,7 +167,7 @@ function duplicate(){
   let clone = document.querySelector('#duplication_model').cloneNode( true );
 
   // Change the id attribute of the newly created element:
-  clone.setAttribute( 'id', ++newId );
+  clone.setAttribute( 'clone', ++newId );
 
   // Append the newly created element on element p
   document.querySelector('#duplication_model').appendChild( clone );
@@ -215,10 +214,17 @@ function duplicate(){
        berechne_GKW_Mann();
      }
 
+
+    /* for(var i = 0; i = newId; i++){
+       if(i==0){
+
+       }
+     }*/
     var BAK_Anfangswert = berechne_BAK();
     // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
 
     alert("GKW: " + GKW);
+
     alert("BAK: " + BAK_Anfangswert);
   }
      //Berechnung der Tatsächlichen Werte nach dem Trinken
