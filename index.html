@@ -24,7 +24,7 @@
         <nav id="info-nav">
             <ul class="info-nav-ul">
                 <li><a href="#erklärung">Warum Promille rechner?</a></li>
-                <li><a href="#mathe-beruendungg">Wie Promille rechnen?</a></li>
+                <li><a href="#mathe-beruendung">Wie Promille rechnen?</a></li>
                 <li><a href="#disclaimar">Disclaimar</a></li>
             </ul>
         </nav>
@@ -60,7 +60,7 @@
             </section>
             <div>
     </section>
-   
+
     <section id="berechnen" class="berechnen-container">
             <div class="person-daten">
                 <h4> Angabe zur Person </h4>
@@ -68,7 +68,6 @@
                      <select id ="geschlecht" name="geschlecht">
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
-            <option value ="keine Angabe">keine angabe</option>
           </select>
           <label for="groesse">Körpergröße in cm:</label>
           <input id ="groesse" type = "number" min="70" max="300" value= "175">
@@ -112,8 +111,9 @@
                         Ich stimme zu, dass die Informationen dieser Website
                         keinen falls dazu verwendet werden können,um zu
                         entscheiden ob jemand noch in der Lage ist ein
-                        Fahrzeug zu führen oder nicht.</label>
+                        Fahrzeug zu führen oder nicht.
                         </br>
+                        </label>
                         <button id="berechneDaten" onclick="validate()">Berechnen</button>
                      </div>
             </div>
@@ -127,15 +127,15 @@
 
         var header = document.getElementById("myHeader");
         var scrollpos = header.offsetTop;
-      
+
         function myFunction() {
           if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
-          } 
+          }
           else {
             header.classList.remove("sticky");
           }
-    
+
           }
 
   //-----------------------------///
@@ -192,7 +192,7 @@
    }
    // Berechnungen
 
-   function berechne(){
+/*   function berechne(){
        var GKW;
        alert("start berechne");
        if(Geschlecht == "weiblich"){
@@ -228,7 +228,7 @@
        alert("berechne BAK Function")
        return (0,8 * A) / GKW;
      }
-  }
+  } */
 
   </script>
   </div>
