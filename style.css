@@ -37,13 +37,6 @@ header{
   grid-gap: 10px;
 }
 
-.ergebnis-container{
-  padding-top: 130px;
-  margin-top: 60px;
-  grid-column: 1;
-  grid-row: 3;
-  position: inherit;
-}
 
 body {
     background-color: #fcfcfc;
