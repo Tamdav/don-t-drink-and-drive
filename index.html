@@ -69,12 +69,12 @@
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
           </select>
-          <label for="groesse">Körpergröße in cm:</label>
-          <input id ="groesse" type = "number" min="70" max="300" value= "175">
-          <label for="gewicht">Körpergewicht in kg:</label>
-          <input id ="gewicht" type = "number" min="30" max="400" value="70">
-          <label for="alter">Alter in J:</label>
-          <input id ="alter" type = "number" min="10" max="150" value= "45">
+          <p>Körpergröße in cm:</p>
+          <input id ="groesse" type = "number" min="70" max="300" value= "175/">
+          <p>Körpergewicht in kg:</p>
+          <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
+          <p>Alter in J:</p>
+          <input id ="alter" type = "number" min="10" max="150" value= "45"/>
             </div>
             <div class="zeit-daten">
                 <h4>Zeitangaben</h4>
@@ -93,15 +93,17 @@
                           <select id="getraenkeListe" size="5"></select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
-                            <label>Menge:</label>
-                            <input id="menge" type="number" min="0" value="0"/>
-                            <select id="metrik" name="metrik">
+                            <label class ="menge-label">Menge:</label>
+                            <input id="menge" type="number" min="0" value="0"class="menge"/>
+                            <select id="metrik" name="metrik" class="metrik-container">
                                 <option value="ml" id="ml">ml</option>
                                 <option value="cl" id="cl">cl</option>
                                 <option id="l" value="l">l</option>
                            </select>
                         </div>
                     </div>
+                  </div>
+                    <div class="input-dialog">
                     <div class="plusGetraenk-container">
                       <button id="plusGetraenk">+ Getränk</button>
                     </div>
@@ -123,7 +125,7 @@
     </section>
 
     <script>
-      
+
   //-----------------------------///
 
   // var Geschlecht_zeile document.getElementById("geschlecht");
