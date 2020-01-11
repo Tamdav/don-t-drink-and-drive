@@ -5,6 +5,7 @@
   <title>PromilleRechner</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -87,10 +88,11 @@
             <div class="drinks-daten-container">
                     <div class="drinks-header">
                         <h4>Konsumierte Getränke</h4>
+                        <p id="demo"></p>
                     </div>
                     <div id="drinks-listen" class="drinks-listen-container">
                         <div id="drinks-liste" class="drinks-liste-container">
-                          <p id="getraenkNr">Getränk x:</p>
+                          <p id="getraenkNr" onshow="getGetraenkNr()"></p>
                           <select id="getraenkeListe" size="5"></select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
@@ -102,9 +104,10 @@
                                 <option id="l" value="l">l</option>
                            </select>
                         </div>
+
                     </div>
                     <div class="plusGetraenk-container">
-                      <button id="plusGetraenk">+ Getränk</button>
+                      <button id="plusGetraenk" onclick="HelloWorld()">+ Getränk</button>
                     </div>
                     <div class="submit-dialog">
                       <label id="checkBoxLabel">
