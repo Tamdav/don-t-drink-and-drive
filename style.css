@@ -379,7 +379,7 @@ button {
   border-radius: 2px;
   transition: background-color .1s ease, color .2s ease;
   color: 	 #ffffff;
-  
+
   &:last-of-type {
     margin-right: 0;
   }
@@ -396,4 +396,9 @@ button {
   font-weight: bold;
   text-align: center;
   color: #ffffff;
+}
+
+.chart2{
+  grid-row:1;
+  grid-column: 2;
 }
