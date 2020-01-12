@@ -40,6 +40,7 @@ header{
 
 
 .ergebnis-container{
+  padding-top: 160px;
   margin-top: 30px;
   grid-column: 1;
   grid-row: 3;
@@ -339,7 +340,12 @@ button a{
   padding-right: 10px;
 }
 
+figcaption {
+  margin-left: 2em;
+  font-size: 20px;
+  color:	 #003300;
 
+}
 
 .graph {
   grid-row:1;
@@ -348,7 +354,7 @@ button a{
   padding-left:2em;
   background-color: #ffe6e6;
   height: 30em;
-  width:40em;
+  width: 40em;
   border-radius: 1em;
 }
 
