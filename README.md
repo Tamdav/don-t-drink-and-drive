@@ -11,6 +11,7 @@
     * Funktion
   * Aufgabenverteilung
 
+
 ## Probleme und Einstufung der Probleme
 
 |                                                     |niedrig|mittel| hoch |gelöst|
@@ -19,13 +20,13 @@
 |zweiter Tab war unter erstem Tab immer sichtbar      |       |   X  |      |   X  |
 |visible setzen im JavaScript funktioniert nicht      |   X   |      |      |   X  |
 |Getränke container hinzufügen                        |       |      |   X  |   X  |
-|Getränke dynamisch hinzufügen (1)                    |       |      |   X  |      |
-|Aktive Tabs farblich hinterlegen                     |   X   |      |      |   X  |
+|Getränke dynamisch hinzufügen (1)                    |       |      |   X  |   X  |
+|Aktive Tabs farblich hinterlegen                     |   X   |      |      |      |
 
   (1) Trotz viel Aufwand konnte das Problem nicht mittels php gelöst werden und musste hartgecoded hinzugefügt werden, da sonst die ganze Webseite nicht funktioniert hätte.
 
 
-## index.html
+## index.html (Model)
 ### Funktion
 
 Im html wird unsere Seite in verschiedene Teile unterteilt.
@@ -53,23 +54,20 @@ Funktion *berechne* schaut welche der beiden Formeln anhand des Inputs verwendet
 
 Funktion *berechne_GKW_Frau*, *berechne_GKW_Mann*, *berechne_BAK* Formeln für die Berechnung.
 
-### Bearbeiter
 
-Maria Seiser
-Katharina Jank
+## style.css (View)
+### Funktion
 
-
-
-
-## style.css
+Das CSS File ist für die Formatierung der Webseite zuständig. Wie bereits in der Planung haben wird uns farblich für Mint und Pink und die Schriftart Arial entschieden.
 
 
 
 
+## script.js (Controller)
+### Funktion
 
-## script.js
-
-
+Im JavaScript erfolgt die Berechnun des Alkoholgehalts im Blut. Dafür müssen die Inputs vom HTML-File übergeben werden. Mithilfe der Watson-Formel wird dann der Alkoholgehalt ermittelt.
+Für die Berechnung mittels Watson-Formel muss zwischen Mann und Frau unterschieden werden, da Alkohol bei beiden Geschlechtern unterschiedlich verarbeitet wird.  
 
 
 
