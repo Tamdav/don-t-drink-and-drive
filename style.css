@@ -82,23 +82,20 @@ h4 {
     overflow: hidden;
 }
 
-li1 a:hover {
+.main-link a:hover, a .active{
     background-color: #cbe7dd;
 }
 
-li1 {
+.main-link {
     float: left;
 }
 
-li1 a {
+.main-link a {
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     color: #3D4F49;
-}
-.active {
-    background-color: #63b699;
 }
 
 .info-nav-ul {
