@@ -16,20 +16,19 @@ header{
 }
 
 .info-container{
-  padding-top: 130px;
-  margin-top: 60px;
+  padding-top: 120px;
+  margin-top: 50px;
   grid-column:1;
   grid-row: 1;
   display: grid;
   grid-template-columns: 20em 50em;
   grid-gap: 1em;
   margin-bottom: 14em;
-  padding-bottom: 160px;
 }
 
 .berechnen-container{
-  padding-top: 130px;
-  margin-top: 60px;
+  padding-top: 120px;
+  margin-top: 80px;
   margin-left: 2em;
   grid-column: 1;
   grid-row-start: 2;
@@ -318,6 +317,13 @@ input {
   color:  #ffffff;
 }
 
+button a{
+  border-style: none;
+  color:  #ffffff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
 .input-button:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
