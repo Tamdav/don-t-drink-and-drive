@@ -27,7 +27,6 @@ Getränk_hinzufügen.onclick = function duplicate(){
   Drinks_Daten.parentNode.appendChild(clone);
 }
 
-
 //Rechenstart
 var Berechne_Button = document.querySelector('berechne-daten');
 

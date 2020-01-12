@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js"></script>
+    
 </head>
 
 <body>
@@ -141,35 +141,18 @@
             </div>
           </section>
     <section id="ergebnis" class="ergebnis-container">
-      <div id="chart1">
-        <figure>
-          <figcaption>Alkoholpegel und Strafgrenzen lt.österreichischem Gesetz</figcaption>
-        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="title" role="img">
-          <title id="title">Alkoholpegel und Strafgrenzen lt.österreichischem Gesetz</title>
-        <g class="grid x-grid" id="xGrid">
-          <line x1="90" x2="90" y1="5" y2="371"></line>
-        </g>
-        <g class="grid y-grid" id="yGrid">
-          <line x1="90" x2="505" y1="370" y2="370"></line>
-        </g>
-          <g class="labels x-labels">
-          <text x="100" y="400">0.1</text>
-          <text x="200" y="400">0.5</text>
-          <text x="272.5" y="400">0.79</text>
-          <text x="372.5" y="400">1.19</text>
-          <text x="472.5" y="400">1.59</text>
-          <text x="200" y="440" class="label-title">Grenzen in Promille</text>
-        </g>
-        <g class="labels y-labels">
-          <text x="90" y="192">Pegel</text>
-        </g>
-        <g class="data" data-setname="">
-          <circle cx="100" cy="192" data-value="1.7" r="4"></circle>
-        </g>
-        </svg>
-      </figure>
-  </div>
-        <div id="chart2"></div>
+        <div id="chart2">
+          <figure>
+          <figcaption>
+            AlkoholProzente Vergleich von 500ml/Alkohol:
+          </figcaption>
+
+          <div class="buttons"></div>
+          <svg width="300" height="300" class="chart">
+            <circle r="100" cx="200" cy="200" class="pie"/>
+          </svg>
+        </figure>
+        </div>
         <div id="chart3"></div>
       </section>
 
@@ -287,7 +270,63 @@
     BAK_Anfangswert = (0,8 * A) / GKW;
   }
 
+  var total = 158,
+      buttons = document.querySelector('.buttons'),
+      pie = document.querySelector('.pie'),
+      activeClass = 'active';
 
+  var alcohol = {
+    bier: 60,
+    weisswein : 5,
+    rotwein: 9,
+    sekt: 1,
+    barcadi: 15,
+    rum: 12
+  };
+
+  // work out percentage as a result of total
+  var numberFixer = function(num){
+    var result = ((num * total) / 100);
+    return result;
+  }
+
+  // create a button for each country
+  for(property in alcohol){
+    var newEl = document.createElement('button');
+    newEl.innerText = property;
+    newEl.setAttribute('data-name', property);
+    buttons.appendChild(newEl);
+  }
+
+  // when you click a button setPieChart and setActiveClass
+    buttons.addEventListener('click', function(e){
+      if(e.target != e.currentTarget){
+        var el = e.target,
+            name = el.getAttribute('data-name');
+        setPieChart(name);
+        setActiveClass(el);
+      }
+      e.stopPropagation();
+    });
+
+  var setPieChart = function(name){
+    var number = continents[name],
+        fixedNumber = numberFixer(number),
+        result = fixedNumber + ' ' + total;
+
+    pie.style.strokeDasharray = result;
+  }
+
+  var setActiveClass = function(el) {
+    for(var i = 0; i < buttons.children.length; i++) {
+      buttons.children[i].classList.remove(activeClass);
+      el.classList.add(activeClass);
+    }
+  }
+
+  // Set up default settings
+  setPieChart('bier');
+  setActiveClass(buttons.children[0]);
 
   </script>
   </div>
