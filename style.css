@@ -23,17 +23,24 @@ header{
   display: grid;
   grid-template-columns: 20em 50em;
   grid-gap: 1em;
-
+  margin-bottom: 1em;
+  height: 90%;
 }
 
 .berechnen-container{
+  padding-top: 30px;
+  margin-top: 60px;
   grid-column: 1;
-  grid-row: 2;
+  grid-row-start: 2;
   display: grid;
-  height: auto;
   align-content: center;
-  grid-template-columns: 15em 15em 30em 23em;
+  grid-template-columns: 15em 15em 35em 23em;
   grid-gap: 10px;
+}
+
+.ergebnis-container{
+  grid-column: 1;
+  grid-row: 3;
 }
 
 
@@ -175,12 +182,13 @@ input {
 
 .drinks-daten-container {
     border: none;
+    padding: 10px;
     border-radius: 1em;
     background-color: #f3d8e1;
     display: grid;
     grid-template-rows: 3em 15em;
-    position: inherit;
-    height: auto;
+    height: 40em;
+    overflow-y: scroll;
 }
 
 .drinks-header {
@@ -193,6 +201,7 @@ input {
   grid-column: 1;
   grid-row: 2;
   margin-left: 1em;
+  margin-right: 1em;
   display: grid;
   grid-template-rows: 10em 5em;
   grid-row-start: inherit;
