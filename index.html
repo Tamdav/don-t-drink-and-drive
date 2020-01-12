@@ -34,7 +34,7 @@
                 <p>
                     Ein Promille steht für das Verhältnis 1:1000 und wird hauptsächlich in Verbindung mit Alkoholkonsum
                     verwendet. Grundsätzlich kann man sagen, dass 1 Promille 1 Gramm Alkohol in 1 Kilogramm Blut gleicht.</br>
-                    Der Promille-Rechner berechnet unter Berücksichtigung von Geschlecht, Körpergröße und -gewicht, Alter,
+                    Der Promille-Rechner berechnet unter Berücksichtigung von Geschlecht, Koerpergroesse und -gewicht, Alter,
                     Trink-Start und -Ende und dem Alkoholgehalt der getrunkenen Getränke den Promille-Anteil im Blut des
                     Konsumenten. </p>
                     Die Berechnungen auf dieser Seite sollen dazu Beitragen ein besseres Verständnis für Alkohol und seine
@@ -47,9 +47,9 @@
                 <p>
                   Unsere Berechnung erfolgt mithilfe der Watson-Formel. Die Formel lautet: </p></p>
                   Blutalkoholkonzentration (BAK) Männer = (0,8 x [Alkoholmenge in Gramm]) / (1,055 x (2.447 - 0.09516 x
-                  [Alter in Jahren] + 0.1074 x [Größe in cm] + 0.3362 x [Körpergewicht in kg]))</p></p>
+                  [Alter in Jahren] + 0.1074 x [Größe in cm] + 0.3362 x [Koerpergewicht in kg]))</p></p>
                   Blutalkoholkonzentration (BAK) Frauen = (0,8 x [Alkoholmenge in Gramm]) / (1,055 x (-2.097+0.1069 x
-                  [Größe in cm] + 0.2466 x [Körpergewicht in kg]))</p></p>
+                  [Größe in cm] + 0.2466 x [Koerpergewicht in kg]))</p></p>
                   Für ein genaueres Ergebnis wird der Beginn und das Ende des Alkoholkonsums berücksichtigt. Aus dem Ergebnis wird
                   ein Graph erstellt, der den ungefähren Alkoholspiegel im Konsumzeitraum wiederspiegelt.
                 </p>
@@ -73,9 +73,9 @@
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
           </select>
-          <p>Körpergröße in cm:</p>
+          <p>Koerpergroesse in cm:</p>
           <input id ="groesse" type = "number" min="70" max="300" value= "175"/>
-          <p>Körpergewicht in kg:</p>
+          <p>Koerpergewicht in kg:</p>
           <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
           <p>Alter in J:</p>
           <input id ="alter" type = "number" min="10" max="150" value= "45"/>
@@ -95,19 +95,19 @@
                         <div id="drinks-liste" class="drinks-liste-container">
                           <p id="getraenkNr">Getränk:</p>
                           <select id="getraenkeListe" size="5">
-                          <option value="0,016" id="Radler">Radler: 0,016 gramm pro ml</option>
-                            <option value="0,04" id="Bier">Bier: 0,04 gramm pro ml</option>
-                            <option value="0,064" id="Starkbier">Starkbier: 0,064 gramm pro ml</option>
-                            <option value="0,048" id="Most">Most: 0,048 gramm pro ml</option>
-                            <option value="0,104" id="Sekt">Sekt: 0,104 gramm pro ml</option>
-                            <option value="0,088" id="Weißwein">Weißwein: 0,088 gramm pro ml</option>
+                          <option value="0.016" id="Radler">Radler: 0,016 gramm pro ml</option>
+                            <option value="0.04" id="Bier">Bier: 0,04 gramm pro ml</option>
+                            <option value="0.064" id="Starkbier">Starkbier: 0,064 gramm pro ml</option>
+                            <option value="0.048" id="Most">Most: 0,048 gramm pro ml</option>
+                            <option value="0.104" id="Sekt">Sekt: 0,104 gramm pro ml</option>
+                            <option value="0.088" id="Weißwein">Weißwein: 0,088 gramm pro ml</option>
                             <option value="1" id="Rotwein">Rotwein: 1 gramm pro ml</option>
-                            <option value="0,064" id="Met">Met: 0,064 gramm pro ml</option>
-                            <option value="0,16" id="Likör">Likör: 0,16 gramm pro ml</option>
-                            <option value="0,255" id="Korn">Korn: 0,255 gramm pro ml</option>
-                            <option value="0,32" id="Barcadi">Barcadi: 0,32 gramm pro ml</option>
-                            <option value="0,64" id="Rum">Rum: 0,64 gramm pro ml</option>
-                            <option value="0,34" id="Obstbrand">Obstbrand: 0,34 gramm pro ml</option>
+                            <option value="0.064" id="Met">Met: 0,064 gramm pro ml</option>
+                            <option value="0.16" id="Likör">Likör: 0,16 gramm pro ml</option>
+                            <option value="0.255" id="Korn">Korn: 0,255 gramm pro ml</option>
+                            <option value="0.32" id="Barcadi">Barcadi: 0,32 gramm pro ml</option>
+                            <option value="0.64" id="Rum">Rum: 0,64 gramm pro ml</option>
+                            <option value="0.34" id="Obstbrand">Obstbrand: 0,34 gramm pro ml</option>
                             </select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
@@ -220,17 +220,17 @@
 
   //-----------------------------///
   var Geschlecht = document.getElementById("geschlecht").value;
-  var Körpergröße = document.getElementById("groesse").innerText;
-  var Körpergewicht = document.getElementById("gewicht").innerText;
+  var Koerpergroesse = document.getElementById("groesse").innerText;
+  var Koerpergewicht = document.getElementById("gewicht").innerText;
   var Alter = document.getElementById("alter").innerText;
  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
  // var Trinkende = document.getElementById("ende").innerHTML;
   var A = 0;
   var GKW = 0
 
-  var newId = 0;
+  var newId = 1;
   var clone;
- //
+  var BAK;
  // var Tinkeende_hours = Trinkende.getHours();
  // var Tinkeende_minutes = Trinkende.getMinutes();
  //
@@ -268,7 +268,7 @@
 
  function validate(){
    is_checked();
-   alert("is_checked");
+
    getA();
    berechne();
  }
@@ -292,44 +292,44 @@
     }
 
 
-   var BAK = berechne_BAK();
+   berechne_BAK();
    // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
 
-   alert("GKW: " + GKW);
 
    alert("BAK: " + BAK);
  }
     //Berechnung der Tatsächlichen Werte nach dem Trinken
   function berechne_GKW_Frau(){
-    GKW = (-2.097 + 0.1069 * Körpergröße + 0.2466 * Körpergewicht);
+    GKW = 1.055 * (2.097 + 0.1069 * Koerpergroesse + 0.2466 * Koerpergewicht);
   }
 
   function berechne_GKW_Mann(){
-    GKW = (2.447 - 0.09516 * Alter + 0.1074 * Körpergröße + 0.3362 * Körpergewicht);
+    GKW = 1.055 *(2.447 - 0.09516 * Alter + 0.1074 * Koerpergroesse + 0.3362 * Koerpergewicht);
 
   }
 
+  // Für Männer ergibt sich ein BAK: (0,8 x 20) / (1,055 x (2.447 - 0.09516 x 38 + 0.1074 x 179 + 0.3362 x 70)) = 0,36 Promille
+ //Für Frauen ergibt sich ein BAK: (0,8 x 20) / (1,055 x (-2.097+0.1069 x 165 + 0.2466 x 58)) = 0,51 Promille
+
+
+
   function berechne_BAK(){
-    return (0.8 * A) / GKW;
+    BAK = (0.8 * A) / GKW;
+    while(BAK > 1){ BAK -= 1;}
   }
 
 
 
 function getA(){
-    alert("Here");
 
    let alkoholgehalt = document.querySelector('#getraenkeListe').value;
    let metrik = document.querySelector('#metrik').value;
-   let menge = document.getElementById("menge").innerHTML;
+   let menge = document.getElementById("menge").value;
 
    alert("Alk: " + alkoholgehalt);
    alert("metrik: " + metrik);
    alert("menge: " + menge);
 
-   if(menge == 0){
-     A = 0;
-     return;
-   }
 
    if(metrik == "cl"){
      menge = menge * 10;
@@ -337,9 +337,8 @@ function getA(){
    if(metrik == "l"){
      menge = menge * 1000;
    }
-   A = menge * ag * newId;
-   alert(A);
 
+   A = menge * alkoholgehalt * newId;
 
 
 }
