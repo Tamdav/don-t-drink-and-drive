@@ -13,14 +13,14 @@
     <header id="myHeader" class = "header-container">
         <h1>Don't Drink and Drive - Promille Rechner</h1>
         <nav id="main-nav">
-            <ul class="main-nav-ul">
-                <li class="main-link"><a id="info-link" href="#info">Info</a></li1>
-                <li class="main-link"><a id="berechnen-link"href="#berechnen">Berechnen</a></li1>
-                <li class="main-link"><a id="ergebnis-link" href="#ergebnis">Ergebnis</a></li1>
-            </ul>
+            <div id ="nav" class="main-nav-ul">
+                <button id="ibtn" class="link-btn"><a href="#info">Info</a></button>
+                <button id="bbtn" class="link-btn" onclick="changeVisibility()"><a href ="#berechnen">Berechnen</a></button>
+                <button id="ebtn" class="link-btn"><a href="#ergebnis">Ergebnis</a></button>
+            </div>
         </nav>
     </header>
-    <section id="info" class="info-container" on>
+    <section id="info" class="info-container">
         <nav id="info-nav">
             <ul class="info-nav-ul">
                 <li ><a href="#erklärung">Warum Promille rechner?</a></li>
@@ -70,7 +70,7 @@
             <option value ="männlich">männlich</option>
           </select>
           <p>Körpergröße in cm:</p>
-          <input id ="groesse" type = "number" min="70" max="300" value= "175/">
+          <input id ="groesse" type = "number" min="70" max="300" value= "175"/>
           <p>Körpergewicht in kg:</p>
           <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
           <p>Alter in J:</p>
@@ -105,7 +105,7 @@
                   </div>
                     <div class="input-dialog">
                     <div class="plusGetraenk-container">
-                      <button id="plusGetraenk" onclick="duplicate()">+ Getränk</button>
+                      <button class= "input-button" id="plusGetraenk" onclick="duplicate()">+ Getränk</button>
                     </div>
                     <div class="submit-dialog">
                       <label id="checkBoxLabel">
@@ -116,15 +116,19 @@
                         Fahrzeug zu führen oder nicht.
                         </br>
                         </label>
-                        <button id="berechneDaten" onclick="validate()">Berechnen</button>
+                        <button class = "input-button" id="berechneDaten" onclick="validate()">Berechnen</button>
                      </div>
+
             </div>
-    </section>
+          </section>
     <section id="ergebnis" class="ergebnis-container">
       <h3>Ergebnis</h3>
+      <div id="chart1"></div>
+      <div id="chart2"></div>
+      <div id="chart3"></div>
     </section>
 
-    <script>
+  <script>
 
   //-----------------------------///
   var Geschlecht = document.getElementById("geschlecht").value;

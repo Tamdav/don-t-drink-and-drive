@@ -104,47 +104,10 @@ function clac_Timedifferenz(){
   return Differenz * 	2.7778E-8;
 }
 
-
-
-document.getElementById("info-link").addEventListener("click",changeActiveTab());
-document.getElementById("berechnen-link").addEventListener("click",changeActiveTab());
-document.getElementById("ergebnis-link").addEventListener("click",changeActiveTab());
-function changeActiveTab(){
-
-var info = 'info';
-var berechn ='berechnen';
-var ergeb ='ergebnis';
-var activeElem;
-var otherElem1;
-var otherElem2;
-
-var url = window.location.href;
-  if(url.indexOf('#' + info + '=') != -1)
-  {
-    activeElem = getElementById(info +'-link');
-    otherElem1 = getElementById(berechn +'-link');
-    otherElem2 = getElementById(ergeb +'-link');
-  }
-  else if(url.indexOf('#' + berechn + '=') != -1)
-  {
-    activeElem = getElementById(berechn +'-link');
-    otherElem1 = getElementById(info +'-link');
-    otherElem2 = getElementById(ergeb +'-link');
-  }
-  else if(url.indexOf('#' + ergeb + '=') != -1)
-  {
-    activeElem = getElementById(ergeb +'-link');
-    otherElem1 = getElementById(berechn +'-link');
-    otherElem2 = getElementById(info +'-link');
-  }
-
-  activeElem.classList.add("active");
-  if(otherElem1.classList.contains("active"))
-  {
-    otherElem1.classList.remove("active");
-  }
-  else if (otherElem2.classList.contains("active"))
-  {
-      otherElem2.classList.remove("active");
-  }
+function changeVisibility()
+{
+    var x = document.getElementById("berechnenvis");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    }
 }

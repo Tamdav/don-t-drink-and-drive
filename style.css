@@ -23,22 +23,26 @@ header{
   display: grid;
   grid-template-columns: 20em 50em;
   grid-gap: 1em;
-  margin-bottom: 1em;
-  height: 90%;
+  margin-bottom: 14em;
+  padding-bottom: 160px;
 }
 
 .berechnen-container{
-  padding-top: 30px;
+  padding-top: 130px;
   margin-top: 60px;
+  margin-left: 2em;
   grid-column: 1;
   grid-row-start: 2;
   display: grid;
   align-content: center;
-  grid-template-columns: 15em 15em 35em 23em;
+  grid-template-columns: 15em 15em 30em 23em;
   grid-gap: 10px;
 }
 
+
 .ergebnis-container{
+  margin-top: 30px;
+  padding-top: 130px;
   grid-column: 1;
   grid-row: 3;
 }
@@ -70,7 +74,6 @@ h4 {
 .person-daten p {
     color: #1f1f1f;
     font-size: 14px;
-    margin-left: 10px;
 }
 
 .main-nav-ul {
@@ -82,20 +85,24 @@ h4 {
     overflow: hidden;
 }
 
-.main-link a:hover, a .active{
-    background-color: #cbe7dd;
+.link-btn:hover, li a:hover{
+  background-color: #ecf9f2;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.main-link {
+.link-btn a{
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #3D4F49;
+}
+
+.link-btn  {
     float: left;
-}
+    background-color:#fcfcfc;
+    border:none;
 
-.main-link a {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #3D4F49;
 }
 
 .info-nav-ul {
@@ -105,11 +112,6 @@ h4 {
     grid-column: 1;
     list-style-type: none;
     background-color: #c6ecd9;
-}
-
-li a:hover {
-    background-color: #ecf9f2;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 li a {
@@ -139,11 +141,12 @@ li a {
     background-color: #e7b1c3;
     background-blend-mode: lighten;
     border-radius: 1em;
+    padding-left:10px;
 }
 
 .person-daten select {
     width: 10em;
-    margin-left: 1em;
+    margin-left: 10px;
     padding: 7px 14px;
     border: none;
     border-radius: 2px;
@@ -305,7 +308,7 @@ input {
 #berechneDaten{
   margin-top: 10px;
 }
-button {
+.input-button {
   height: 3em;
   width: 100px;
   border-radius: 7px;
@@ -315,6 +318,6 @@ button {
   color:  #ffffff;
 }
 
-button:hover{
+.input-button:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
