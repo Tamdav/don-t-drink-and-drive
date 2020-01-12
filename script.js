@@ -28,15 +28,10 @@
  // Change the id attribute of the newly created element:
  clone.setAttribute( 'drinks-listen', ++newId );
 
-<<<<<<< HEAD
-//Rechenstart
-var Berechne_Button = document.querySelector('berechne-daten');
-=======
  // Append the newly created element on element p
  document.querySelector('#duplication_model').appendChild( clone );
 
  }
->>>>>>> 75b362101d8c6a03cd3e90ec892010d044047adf
 
  function validate(){
    is_checked();
