@@ -10,6 +10,7 @@
   * style.css
     * Funktion
   * Aufgabenverteilung
+  * Zeitplanung
 
 
 ## Probleme und Einstufung der Probleme
@@ -80,4 +81,16 @@ Für die Berechnung mittels Watson-Formel muss zwischen Mann und Frau unterschie
 |JavaScript                                           |   Tamara David   |
 |CSS                                                  |   Maria Seiser   |
 |Dokumentation                                        |  Katharina Jank  |
-|Präsentation                                         |        Alle      |
+|Präsentation                                         |  Katharina Jank  |
+
+
+## Zeitplanung
+
+|  geplanter Zeitraum  |        Aufgabe                | tatsächlicher Zeitraum  |
+|:--------------------:|:-----------------------------:|:-----------------------:|
+| KW 45                | Anfertigung Projektplan       | KW 45                   |
+| 18.11.2019           | Präsentation Projektplan      | 18.11.2019              |
+| KW 46                | Start Implementierung         | 8.12.2019               |
+| KW 1 (2020)          | Testphase                     | KW 2                    |
+| 12.01.2020           | Fertigstellung Präsentation   | 12.1.2020               |
+| KW 3                 | Präsentation Demo             | KW 3                    |
