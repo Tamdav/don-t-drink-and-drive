@@ -335,6 +335,16 @@ button a{
 .chart1{
   grid-column: 1;
   grid-row: 1;
+  background-color: #333333;
+  border-color:  #f2e6d9;
+  border-radius: 1em;
+  width:30em;
+  height:20em;
+  margin:2em;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 circle {
@@ -368,7 +378,8 @@ button {
   outline: none;
   border-radius: 2px;
   transition: background-color .1s ease, color .2s ease;
-
+  color: 	 #ffffff;
+  
   &:last-of-type {
     margin-right: 0;
   }
@@ -379,9 +390,10 @@ button {
   }
 
 
-figcaption {
+.chart1 figcaption {
   margin-bottom: 20px;
   font-size: 22px;
   font-weight: bold;
   text-align: center;
+  color: #ffffff;
 }
