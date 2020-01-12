@@ -6,6 +6,7 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -127,12 +128,46 @@
           </section>
     <section id="ergebnis" class="ergebnis-container">
       <h3>Ergebnis</h3>
-      <div id="chart1"></div>
-      <div id="chart2"></div>
-      <div id="chart3"></div>
-    </section>
+      <div id="chart1">
+        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="title" role="img">
+<title id="title">Alkoholpegel und Strafgrenzen lt.österreichischem Gesetz</title>
+        <g class="grid x-grid" id="xGrid">
+          <line x1="90" x2="90" y1="5" y2="371"></line>
+        </g>
+        <g class="grid y-grid" id="yGrid">
+          <line x1="90" x2="505" y1="370" y2="370"></line>
+        </g>
+          <g class="labels x-labels">
+          <text x="100" y="400">0.1</text>
+          <text x="200" y="400">0.5</text>
+          <text x="272.5" y="400">0.79</text>
+          <text x="372.5" y="400">1.19</text>
+          <text x="472.5" y="400">1.59</text>
+          <text x="200" y="440" class="label-title">Grenzen in Promille</text>
+        </g>
+        <g class="labels y-labels">
+          <text x="90" y="192">Pegel</text>
+        </g>
+        <g class="data" data-setname="">
+          <circle cx="100" cy="192" data-value="1.7" r="4"></circle>
+        </g>
+        </svg>
+  </div>
+        <div id="chart2"></div>
+        <div id="chart3"></div>
+      </section>
 
   <script>
+
+  function getDataValueX()
+  {
+    return 100;
+  }
+  function getDataValue1()
+  {
+    return 1.1;
+  }
+
 
   //-----------------------------///
   var Geschlecht = document.getElementById("geschlecht").value;

@@ -41,9 +41,9 @@ header{
 
 .ergebnis-container{
   margin-top: 30px;
-  padding-top: 130px;
   grid-column: 1;
   grid-row: 3;
+  display: grid;
 }
 
 
@@ -324,6 +324,36 @@ button a{
   display: block;
   text-align: center;
 }
+
 .input-button:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+  text-anchor: end;
+  padding-right: 10px;
+}
+
+
+
+.graph {
+  grid-row:1;
+  grid-column: 1;
+  margin-left: 2em;
+  padding-left:2em;
+  background-color: #ffe6e6;
+  height: 30em;
+  width:40em;
+  border-radius: 1em;
+}
+
+.graph .grid {
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
 }

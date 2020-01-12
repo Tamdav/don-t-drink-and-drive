@@ -103,11 +103,3 @@ function clac_Timedifferenz(){
 
   return Differenz * 	2.7778E-8;
 }
-
-function changeVisibility()
-{
-    var x = document.getElementById("berechnenvis");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    }
-}
