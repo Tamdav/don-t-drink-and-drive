@@ -228,9 +228,9 @@
 
   //-----------------------------///
   var Geschlecht = document.getElementById("geschlecht").value;
-  var Körpergröße = document.getElementById("groesse").value;
-  var Körpergewicht = document.getElementById("gewicht").value;
-  var Alter = document.getElementById("alter").value;
+  var Körpergröße = document.getElementById("groesse").innerText;
+  var Körpergewicht = document.getElementById("gewicht").innerText;
+  var Alter = document.getElementById("alter").innerText;
  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
  // var Trinkende = document.getElementById("ende").innerHTML;
   var A = 0;
@@ -276,26 +276,11 @@
 
  function validate(){
    is_checked();
-   check_all_values();
-
-   //A muss noch beachtet werden
+   alert("is_checked");
+   getA();
    berechne();
  }
 
- //Check ob alle Daten vorhanden
- function check_all_values(){
-
-   is_valid(Körpergröße);
-   is_valid(Körpergewicht);
-   is_valid(Alter);
- }
-
- function is_valid(Feld){
-   if (Feld.innerHTML == ""){
-     alert("Bitte fülle das Feld aus: " + Feld);
-     exit();
-   }
- }
 
   function is_checked(){
     var Checkbox =  document.getElementById("checkDisclaimar");
@@ -315,66 +300,58 @@
     }
 
 
-   /* for(var i = 0; i = newId; i++){
-      if(i==0){
-
-      }
-    }*/
-   var BAK_Anfangswert = berechne_BAK();
+   var BAK = berechne_BAK();
    // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
 
    alert("GKW: " + GKW);
 
-   alert("BAK: " + BAK_Anfangswert);
+   alert("BAK: " + BAK);
  }
     //Berechnung der Tatsächlichen Werte nach dem Trinken
   function berechne_GKW_Frau(){
-    GKW = -2,097 + (0,1069 * Körpergröße) + (0,2466 * Körpergewicht);
+    GKW = (-2.097 + 0.1069 * Körpergröße + 0.2466 * Körpergewicht);
   }
 
   function berechne_GKW_Mann(){
-    GKW = 2,447 - (0,09516 * Alter) + (0,1074 * Körpergröße) + (0,3362 * Körpergewicht);
+    GKW = (2.447 - 0.09516 * Alter + 0.1074 * Körpergröße + 0.3362 * Körpergewicht);
 
   }
 
   function berechne_BAK(){
-    BAK_Anfangswert = (0,8 * A) / GKW;
+    return (0.8 * A) / GKW;
   }
 
 
 
 function getA(){
+    alert("Here");
 
- for(var i = 0; i <= newId; i++){
-     var alkoholgehalt = parseFloat(getraenkeListe[i]);
-     var metrik = metrik_liste[i];
-     var menge = mengen_liste[i];
+   let alkoholgehalt = document.querySelector('#getraenkeListe').value;
+   let metrik = document.querySelector('#metrik').value;
+   let menge = document.getElementById("menge").innerHTML;
 
-     berechneA(alkoholgehalt,metrik,menge);
+   alert("Alk: " + alkoholgehalt);
+   alert("metrik: " + metrik);
+   alert("menge: " + menge);
 
+   if(menge == 0){
+     A = 0;
+     return;
    }
-   A += A_current;
+
+   if(metrik == "cl"){
+     menge = menge * 10;
+   }
+   if(metrik == "l"){
+     menge = menge * 1000;
+   }
+   A = menge * ag * newId;
    alert(A);
 
 
 
 }
 
-function berechneA( ag, metrik, menge){
-  if(menge == 0){
-    A_current = 0;
-    return;
-  }
-  if(metrik == "cl"){
-    menge = menge * 10;
-  }
-  if(metrik == "l"){
-    menge = menge * 1000;
-  }
-  A_current = menge * ag;
-  alert(A_current);
-  return;
-}
 
 
   </script>
