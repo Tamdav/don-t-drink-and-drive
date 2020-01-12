@@ -46,7 +46,6 @@ header{
   grid-row: 3;
   display: grid;
   grid-template-columns: 40em 40em;
-  grid-template-rows: 34em 34em;
 }
 
 
@@ -261,7 +260,7 @@ input {
   grid-row: 1;
 }
 
-.menge {
+.menge-container {
   grid-column: 2;
   grid-row: 1;
   width: 4em;
@@ -332,70 +331,38 @@ button a{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
-.graph .labels.x-labels {
-  text-anchor: middle;
-}
-
-.graph .labels.y-labels {
-  text-anchor: end;
-  padding-right: 10px;
-}
-
-figcaption {
-  margin-left: 2em;
-  font-size: 20px;
-  color:	 #003300;
-
-}
-
-.graph {
-  grid-row:1;
+.chart1{
   grid-column: 1;
-  margin-left: 2em;
-  padding-left:2em;
-  background-color: #ffe6e6;
-  height: 30em;
-  width: 40em;
-  border-radius: 1em;
-}
-
-.graph .grid {
-  stroke: #ccc;
-  stroke-dasharray: 0;
-  stroke-width: 1;
-}
-
-
-.chart2{
   grid-row: 1;
-  grid-column: 2;
+  background-color: #333333;
+  border-color:  #f2e6d9;
+  border-radius: 1em;
+  width:30em;
+  height:20em;
+  margin:2em;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.chart3{
-  grid-row: 2;
-  grid-column:1;
-}
-
-$primaryColor: #0074d9;
-
- circle {
- fill: #ddd;
-  stroke: $primaryColor;
-  stroke-width: 50;
+.chart1 circle {
+  fill: #ddd;
+  stroke: #ff8080;
+  stroke-width: 100;
   stroke-dasharray: 0 158;
   transition: stroke-dasharray .3s ease;
 }
 
-.svg {
+.chart1 svg {
   margin: 0 auto;
   transform: rotate(-90deg);
   background: #ddd;
   border-radius: 50%;
   display: block;
 }
+
 .buttons {
-  margin-left:2em;
   margin-bottom: 30px;
 }
 
@@ -403,21 +370,81 @@ button {
   text-transform: capitalize;
   font-size: 13px;
   cursor: pointer;
-  -webkit-appearance: none;
   border: none;
   margin-right: 5px;
-  background-color: #00cc99;
+  background-color: transparent;
   padding: 5px 10px;
   outline: none;
   border-radius: 2px;
   transition: background-color .1s ease, color .2s ease;
+  color: 	 #ffffff;
+
   &:last-of-type {
     margin-right: 0;
   }
-
-  &.active {
+}
+  .active {
     font-weight: 400;
-    background-color: $primaryColor;
-    color: white;
+    background-color:	 #ff8080;
+    color: 	 #333333;
+
   }
+
+
+.chart1 figcaption {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+.chart2{
+  grid-row:1;
+  grid-column: 2;
+  background-color:  #ffcccc;
+  border-color:  #f2e6d9;
+  border-radius: 1em;
+  width:40em;
+  height:20em;
+  margin:2em;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 10em 10em;
+}
+.chart2 figure{
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.chart2 ul{
+  grid-row: 2;
+  grid-column: 1;
+  list-style-type:circle;
+
+}
+
+.chart2 a{
+ text-decoration: none;
+ weight: bold italic;
+ color: #333333;
+
+}
+
+.chart2 figcaption {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+}
+
+g text {
+  padding: 10px;
+  color: #333333;
+  weight:bold;
+  font-size: 20px;
 }

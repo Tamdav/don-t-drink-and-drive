@@ -23,13 +23,20 @@
 
 
  function duplicate(){
+
  let clone = document.querySelector('#drinks-listen0').cloneNode( true );
 
+ getränkeListe.push(clone.firstElementChild.firstElementChild.nextElementSibling);
+
+ mengen_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling);
+ metrik_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling);
  // Change the id attribute of the newly created element:
  clone.setAttribute( 'drinks-listen', ++newId );
 
+ alert("duplicate");
  // Append the newly created element on element p
  document.querySelector('#duplication_model').appendChild( clone );
+
 
  }
 
