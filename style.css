@@ -46,7 +46,6 @@ header{
   grid-row: 3;
   display: grid;
   grid-template-columns: 40em 40em;
-  grid-template-rows: 34em 34em;
 }
 
 
@@ -261,7 +260,7 @@ input {
   grid-row: 1;
 }
 
-.menge {
+.menge-container {
   grid-column: 2;
   grid-row: 1;
   width: 4em;
@@ -347,15 +346,15 @@ button a{
   align-items: center;
 }
 
-circle {
+.chart1 circle {
   fill: #ddd;
-  stroke: #a3c2c2;
+  stroke: #ff8080;
   stroke-width: 100;
   stroke-dasharray: 0 158;
   transition: stroke-dasharray .3s ease;
 }
 
-svg {
+.chart1 svg {
   margin: 0 auto;
   transform: rotate(-90deg);
   background: #ddd;
@@ -386,7 +385,9 @@ button {
 }
   .active {
     font-weight: 400;
-    background-color:#a3c2c2;
+    background-color:	 #ff8080;
+    color: 	 #333333;
+
   }
 
 
@@ -401,4 +402,49 @@ button {
 .chart2{
   grid-row:1;
   grid-column: 2;
+  background-color:  #ffcccc;
+  border-color:  #f2e6d9;
+  border-radius: 1em;
+  width:40em;
+  height:20em;
+  margin:2em;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 10em 10em;
+}
+.chart2 figure{
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.chart2 ul{
+  grid-row: 2;
+  grid-column: 1;
+  list-style-type:circle;
+
+}
+
+.chart2 a{
+ text-decoration: none;
+ weight: bold italic;
+ color: #333333;
+
+}
+
+.chart2 figcaption {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+}
+
+g text {
+  padding: 10px;
+  color: #333333;
+  weight:bold;
+  font-size: 20px;
 }
