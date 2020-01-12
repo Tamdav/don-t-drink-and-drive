@@ -21,12 +21,7 @@ body {
 
 header {
   background-color: #fcfcfc;
-<<<<<<< HEAD
-  background-blend-mode: darken;
-  position: relative;
-=======
   width: 100%
->>>>>>> 5d2041f44df3c936ed3d019168c76f4e6b3dc9b7
 }
 #info{
   margin-top: 2em;
