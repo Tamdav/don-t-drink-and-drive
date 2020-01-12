@@ -47,10 +47,6 @@ header{
   display: grid;
   grid-template-columns: 40em 40em;
   grid-template-rows: 34em 34em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 
@@ -334,6 +330,11 @@ button a{
 
 .input-button:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.chart1{
+  grid-column: 1;
+  grid-row: 1;
 }
 
 circle {

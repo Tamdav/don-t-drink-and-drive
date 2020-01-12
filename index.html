@@ -243,15 +243,17 @@
 
 
  function duplicate(){
+   alert("duplicate");
  let clone = document.querySelector('#drinks-listen').cloneNode( true );
-
+ getränkeListe.push(clone.firstElementChild.firstElementChild.nextElementSibling);
+ mengen_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling);
+ metrik_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling);
  // Change the id attribute of the newly created element:
- clone.setAttribute( 'clone', ++newId );
+ clone.setAttribute( 'drinks-listen', ++newId );
 
  // Append the newly created element on element p
  document.querySelector('#duplication_model').appendChild( clone );
-
- }
+}
 
  function validate(){
    is_checked();
@@ -318,6 +320,22 @@
 
   function berechne_BAK(){
     BAK_Anfangswert = (0,8 * A) / GKW;
+  }
+
+  function berechneA( ag, metrik, menge){
+     if(menge == 0){
+       A_current = 0;
+       return;
+     }
+     if(metrik == "cl"){
+       menge = menge * 10;
+     }
+     if(metrik == "l"){
+       menge = menge * 1000;
+     }
+     A_current = menge * ag;
+     alert(A_current);
+     return;
   }
 
 

@@ -23,8 +23,11 @@
 
 
  function duplicate(){
+   alert("duplicate");
  let clone = document.querySelector('#drinks-listen0').cloneNode( true );
-
+ getränkeListe.push(clone.firstElementChild.firstElementChild.nextElementSibling);
+ mengen_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling);
+ metrik_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling);
  // Change the id attribute of the newly created element:
  clone.setAttribute( 'drinks-listen', ++newId );
 
