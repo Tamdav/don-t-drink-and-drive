@@ -3,60 +3,67 @@
 
   <head>
   <title>PromilleRechner</title>
+    <script language="javascript" type="text/javascript" charset="utf-8" src="script.js"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="script.js"></script>
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 75b362101d8c6a03cd3e90ec892010d044047adf
 </head>
 
 <body>
-
-    <header>
+  <div class = "body-wrapper">
+    <header id="myHeader" class = "header-container">
         <h1>Don't Drink and Drive - Promille Rechner</h1>
         <nav id="main-nav">
-            <ul class="main-nav-ul">
-                <li1><a href="#info">Info</a></li1>
-                <li1><a href="#berechnen">Berechnen</a></li1>
-                <li1><a href="#ergebnis">Ergebnis</a></li1>
-            </ul>
+            <div id ="nav" class="main-nav-ul">
+                <button id="ibtn" class="link-btn"><a href="#info">Info</a></button>
+                <button id="bbtn" class="link-btn" onclick="changeVisibility()"><a href ="#berechnen">Berechnen</a></button>
+                <button id="ebtn" class="link-btn"><a href="#ergebnis">Ergebnis</a></button>
+            </div>
         </nav>
     </header>
-  <div class = "body-wrapper">
     <section id="info" class="info-container">
         <nav id="info-nav">
             <ul class="info-nav-ul">
-                <li><a href="#erklärung">Warum Promille rechner?</a></li>
+                <li ><a href="#erklärung">Warum Promille rechner?</a></li>
                 <li><a href="#mathe-beruendung">Wie Promille rechnen?</a></li>
                 <li><a href="#disclaimar">Disclaimar</a></li>
             </ul>
         </nav>
         <div class="info-inhalt-container">
             <section id="erklärung">
-                <h3>Warum ein Promille-Rechner? </h3>
+                <h3>Was ist ein Promille-Rechner? </h3>
                 <p>
-                    Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
-                    Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
-                    und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
-                    zu erzielen wird aber zumindest der Start-Zeitpunkt des Alkohol-Konsums benötigt. </br>
+                    Ein Promille steht für das Verhältnis 1:1000 und wird hauptsächlich in Verbindung mit Alkoholkonsum
+                    verwendet. Grundsätzlich kann man sagen, dass 1 Promille 1 Gramm Alkohol in 1 Kilogramm Blut gleicht.</br>
+                    Der Promille-Rechner berechnet unter Berücksichtigung von Geschlecht, Körpergröße und -gewicht, Alter,
+                    Trink-Start und -Ende und dem Alkoholgehalt der getrunkenen Getränke den Promille-Anteil im Blut des
+                    Konsumenten. </p>
                     Die Berechnungen auf dieser Seite sollen dazu Beitragen ein besseres Verständnis für Alkohol und seine
                     Auswirkungen auf den Menschlichen Körper zu erlangen.
                 </p>
             </section>
 
             <section id="mathe-beruendungg">
-                <h3>Wie Promille Berechnen? </h3>
+                <h3>Wie wird der Promillegehalt berechnet? </h3>
                 <p>
-                    Mithilfe mathematischer Formeln kann man den Promille Wert im Blut einigermaßen genau bestimmen.
-                    Aus den Resultaten unserer Berechnungen entstehnden dann informative Graphen. Mithilfe von Körpergröße, Gewicht
-                    und Geschlecht lässt sich schon annähern wie viel Alkohol-Prozent die Person in sich hat, um genauere Resultate
-                    zu erzielen wird aber zumindest der Start-Zeitpunkt des Alkohol-Konsums benötigt.
+                  Unsere Berechnung erfolgt mithilfe der Watson-Formel. Die Formel lautet: </p></p>
+                  Blutalkoholkonzentration (BAK) Männer = (0,8 x [Alkoholmenge in Gramm]) / (1,055 x (2.447 - 0.09516 x
+                  [Alter in Jahren] + 0.1074 x [Größe in cm] + 0.3362 x [Körpergewicht in kg]))</p></p>
+                  Blutalkoholkonzentration (BAK) Frauen = (0,8 x [Alkoholmenge in Gramm]) / (1,055 x (-2.097+0.1069 x
+                  [Größe in cm] + 0.2466 x [Körpergewicht in kg]))</p></p>
+                  Für ein genaueres Ergebnis wird der Beginn und das Ende des Alkoholkonsums berücksichtigt. Aus dem Ergebnis wird
+                  ein Graph erstellt, der den ungefähren Alkoholspiegel im Konsumzeitraum wiederspiegelt.
                 </p>
             </section>
 
             <section id="disclaimar">
                 <h3>Disclaimar</h3>
                 <p>
-                    Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
-                    verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll konsumirt werden und Maßen.
+                  Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
+                  verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll und in Maßen konsumiert werden.
                 </p>
             </section>
             <div>
@@ -65,7 +72,7 @@
     <section id="berechnen" class="berechnen-container">
             <div class="person-daten">
                 <h4> Angabe zur Person </h4>
-                <p>Geschlecht:</p>
+                <p>Geschlecht:<p>
                      <select id ="geschlecht" name="geschlecht">
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
@@ -84,29 +91,43 @@
                     <p>Trink-Ende:</p>
                     <input id ="ende" type="time" name="ende" value="00:00:00">
             </div>
-            <div class="drinks-daten-container">
+            <div id="duplication_model" class="drinks-daten-container">
                     <div class="drinks-header">
                         <h4>Konsumierte Getränke</h4>
-                        <p id="demo"></p>
                     </div>
-                    <div id="drinks-listen" class="drinks-listen-container">
+                    <div id="drinks-listen0" class="drinks-listen-container">
                         <div id="drinks-liste" class="drinks-liste-container">
-                          <p id="getraenkNr" onshow="getGetraenkNr()"></p>
-                          <select id="getraenkeListe" size="5"></select>
+                          <p id="getraenkNr">Getränk:</p>
+                          <select id="getraenkeListe" size="5">
+                          <option value="0,016" id="Radler">Radler: 0,016 gramm pro ml</option>
+                            <option value="0,04" id="Bier">Bier: 0,04 gramm pro ml</option>
+                            <option value="0,064" id="Starkbier">Starkbier: 0,064 gramm pro ml</option>
+                            <option value="0,048" id="Most">Most: 0,048 gramm pro ml</option>
+                            <option value="0,104" id="Sekt">Sekt: 0,104 gramm pro ml</option>
+                            <option value="0,088" id="Weißwein">Weißwein: 0,088 gramm pro ml</option>
+                            <option value="1" id="Rotwein">Rotwein: 1 gramm pro ml</option>
+                            <option value="0,064" id="Met">Met: 0,064 gramm pro ml</option>
+                            <option value="0,16" id="Likör">Likör: 0,16 gramm pro ml</option>
+                            <option value="0,255" id="Korn">Korn: 0,255 gramm pro ml</option>
+                            <option value="0,32" id="Barcadi">Barcadi: 0,32 gramm pro ml</option>
+                            <option value="0,64" id="Rum">Rum: 0,64 gramm pro ml</option>
+                            <option value="0,34" id="Obstbrand">Obstbrand: 0,34 gramm pro ml</option>
+                            </select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
-                            <label>Menge:</label>
-                            <input id="menge" type="number" min="0" value="0"/>
-                            <select id="metrik" name="metrik">
+                            <label class ="menge-label">Menge:</label>
+                            <input id="menge" type="number" min="0" value="0"class="menge"/>
+                            <select id="metrik" name="metrik" class="metrik-container">
                                 <option value="ml" id="ml">ml</option>
                                 <option value="cl" id="cl">cl</option>
                                 <option id="l" value="l">l</option>
                            </select>
                         </div>
-
                     </div>
+                  </div>
+                    <div class="input-dialog">
                     <div class="plusGetraenk-container">
-                      <button id="plusGetraenk" onclick="HelloWorld()">+ Getränk</button>
+                      <button class= "input-button" id="plusGetraenk" onclick="duplicate()">+ Getränk</button>
                     </div>
                     <div class="submit-dialog">
                       <label id="checkBoxLabel">
@@ -117,13 +138,203 @@
                         Fahrzeug zu führen oder nicht.
                         </br>
                         </label>
-                        <button id="berechneDaten" onclick="validate()">Berechnen</button>
+                        <button class = "input-button" id="berechneDaten" onclick="validate()"><a href="#ergebnis">Berechnen</a></button>
                      </div>
+
             </div>
-    </section>
+          </section>
     <section id="ergebnis" class="ergebnis-container">
-      <h3>Ergebnis</h3>
-    </section>
+        <div id="chart2">
+          <figure>
+          <figcaption>
+            AlkoholProzente Vergleich von 500ml/Alkohol:
+          </figcaption>
+
+          <div class="buttons"></div>
+          <svg width="300" height="300" class="chart">
+            <circle r="100" cx="200" cy="200" class="pie"/>
+          </svg>
+        </figure>
+        </div>
+        <div id="chart3"></div>
+      </section>
+
+<<<<<<< HEAD
+  <script>
+
+  function getDataValueX()
+  {
+    return 100;
+  }
+  function getDataValue1()
+  {
+    return 1.1;
+  }
+
+
+  //-----------------------------///
+  var Geschlecht = document.getElementById("geschlecht").value;
+  var Körpergröße = document.getElementById("groesse").value;
+  var Körpergewicht = document.getElementById("gewicht").value;
+  var Alter = document.getElementById("alter").value;
+ // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
+ // var Trinkende = document.getElementById("ende").innerHTML;
+  var A = 0;
+  var GKW = 0
+
+  var newId = 0;
+  var clone;
+ //
+ // var Tinkeende_hours = Trinkende.getHours();
+ // var Tinkeende_minutes = Trinkende.getMinutes();
+ //
+ // var Uhrzeit = new Date();
+ // var Uhrzeit_Hours = Uhrzeit.getHours()
+ // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
+
+ //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
+
+
+
+ function duplicate(){
+ let clone = document.querySelector('#drinks-listen').cloneNode( true );
+
+ // Change the id attribute of the newly created element:
+ clone.setAttribute( 'clone', ++newId );
+
+ // Append the newly created element on element p
+ document.querySelector('#duplication_model').appendChild( clone );
+
+ }
+
+ function validate(){
+   is_checked();
+   check_all_values();
+
+   //A muss noch beachtet werden
+   berechne();
+ }
+
+ //Check ob alle Daten vorhanden
+ function check_all_values(){
+
+   is_valid(Körpergröße);
+   is_valid(Körpergewicht);
+   is_valid(Alter);
+ }
+
+ function is_valid(Feld){
+   if (Feld.innerHTML == ""){
+     alert("Bitte fülle das Feld aus: " + Feld);
+     exit();
+   }
+ }
+
+  function is_checked(){
+    var Checkbox =  document.getElementById("checkDisclaimar");
+    if (Checkbox.checked == false){
+      alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
+      exit();
+    }
+  }
+  // Berechnungen
+
+  function berechne(){
+    if(Geschlecht == "weiblich"){
+      berechne_GKW_Frau();
+    }
+    if(Geschlecht == "männlich"){
+      berechne_GKW_Mann();
+    }
+
+
+   /* for(var i = 0; i = newId; i++){
+      if(i==0){
+
+      }
+    }*/
+   var BAK_Anfangswert = berechne_BAK();
+   // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
+
+   alert("GKW: " + GKW);
+
+   alert("BAK: " + BAK_Anfangswert);
+ }
+    //Berechnung der Tatsächlichen Werte nach dem Trinken
+  function berechne_GKW_Frau(){
+    GKW = -2,097 + (0,1069 * Körpergröße) + (0,2466 * Körpergewicht);
+  }
+
+  function berechne_GKW_Mann(){
+    GKW = 2,447 - (0,09516 * Alter) + (0,1074 * Körpergröße) + (0,3362 * Körpergewicht);
+
+  }
+
+  function berechne_BAK(){
+    BAK_Anfangswert = (0,8 * A) / GKW;
+  }
+
+  var total = 158,
+      buttons = document.querySelector('.buttons'),
+      pie = document.querySelector('.pie'),
+      activeClass = 'active';
+
+  var alcohol = {
+    bier: 60,
+    weisswein : 5,
+    rotwein: 9,
+    sekt: 1,
+    barcadi: 15,
+    rum: 12
+  };
+
+  // work out percentage as a result of total
+  var numberFixer = function(num){
+    var result = ((num * total) / 100);
+    return result;
+  }
+
+  // create a button for each country
+  for(property in alcohol){
+    var newEl = document.createElement('button');
+    newEl.innerText = property;
+    newEl.setAttribute('data-name', property);
+    buttons.appendChild(newEl);
+  }
+
+  // when you click a button setPieChart and setActiveClass
+    buttons.addEventListener('click', function(e){
+      if(e.target != e.currentTarget){
+        var el = e.target,
+            name = el.getAttribute('data-name');
+        setPieChart(name);
+        setActiveClass(el);
+      }
+      e.stopPropagation();
+    });
+
+  var setPieChart = function(name){
+    var number = continents[name],
+        fixedNumber = numberFixer(number),
+        result = fixedNumber + ' ' + total;
+
+    pie.style.strokeDasharray = result;
+  }
+
+  var setActiveClass = function(el) {
+    for(var i = 0; i < buttons.children.length; i++) {
+      buttons.children[i].classList.remove(activeClass);
+      el.classList.add(activeClass);
+    }
+  }
+
+  // Set up default settings
+  setPieChart('bier');
+  setActiveClass(buttons.children[0]);
+
+  </script>
+=======
+>>>>>>> 75b362101d8c6a03cd3e90ec892010d044047adf
   </div>
 </body>
 </html>
