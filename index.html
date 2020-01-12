@@ -83,13 +83,13 @@
                     <p>Trink-Ende:</p>
                     <input id ="ende" type="time" name="ende" value="00:00:00">
             </div>
-            <div class="drinks-daten-container">
+            <div id="duplication_model" class="drinks-daten-container">
                     <div class="drinks-header">
                         <h4>Konsumierte Getränke</h4>
                     </div>
                     <div id="drinks-listen" class="drinks-listen-container">
                         <div id="drinks-liste" class="drinks-liste-container">
-                          <p id="getraenkNr">Getränk x:</p>
+                          <p id="getraenkNr">Getränk:</p>
                           <select id="getraenkeListe" size="5"></select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
@@ -105,7 +105,7 @@
                   </div>
                     <div class="input-dialog">
                     <div class="plusGetraenk-container">
-                      <button id="plusGetraenk">+ Getränk</button>
+                      <button id="plusGetraenk" onclick="duplicate()">+ Getränk</button>
                     </div>
                     <div class="submit-dialog">
                       <label id="checkBoxLabel">
@@ -127,90 +127,107 @@
     <script>
 
   //-----------------------------///
+  var Geschlecht = document.getElementById("geschlecht").value;
+  var Körpergröße = document.getElementById("groesse").value;
+  var Körpergewicht = document.getElementById("gewicht").value;
+  var Alter = document.getElementById("alter").value;
+ // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
+ // var Trinkende = document.getElementById("ende").innerHTML;
+  var A = 0;
+  var GKW = 0
 
-  // var Geschlecht_zeile document.getElementById("geschlecht");
-   var Geschlecht = "weiblich";// Geschlecht_zeile.options[Geschlecht_zeile.selectedIndex].text;
+  var newId = 0;
+  var clone;
+ //
+ // var Tinkeende_hours = Trinkende.getHours();
+ // var Tinkeende_minutes = Trinkende.getMinutes();
+ //
+ // var Uhrzeit = new Date();
+ // var Uhrzeit_Hours = Uhrzeit.getHours()
+ // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
 
-   var Körpergröße = document.getElementById("groesse").value;
-   var Körpergewicht = document.getElementById("gewicht").value;
-   var Alter = document.getElementById("alter").value;
-  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
-  // var Trinkende = document.getElementById("ende").innerHTML;
-   var A = 0;
-   var GKW = 0;
-   var BAK_Anfangswer = 0;
-  //
-  // var Tinkeende_hours = Trinkende.getHours();
-  // var Tinkeende_minutes = Trinkende.getMinutes();
-  //
-  // var Uhrzeit = new Date();
-  // var Uhrzeit_Hours = Uhrzeit.getHours()
-  // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
-
-  //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
+ //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
 
 
-  function validate(){
-    is_checked();
-    check_all_values();
 
-    //A muss noch beachtet werden
-    berechne();
-  }
+ function duplicate(){
+ let clone = document.querySelector('#drinks-listen').cloneNode( true );
 
-  //Check ob alle Daten vorhanden
-  function check_all_values(){
+ // Change the id attribute of the newly created element:
+ clone.setAttribute( 'clone', ++newId );
 
-    is_valid(Körpergröße);
-    is_valid(Körpergewicht);
-    is_valid(Alter);
-  }
+ // Append the newly created element on element p
+ document.querySelector('#duplication_model').appendChild( clone );
 
-  function is_valid(Feld){
-    if (Feld.innerHTML == ""){
-      alert("Bitte fülle das Feld aus: " + Feld);
+ }
+
+ function validate(){
+   is_checked();
+   check_all_values();
+
+   //A muss noch beachtet werden
+   berechne();
+ }
+
+ //Check ob alle Daten vorhanden
+ function check_all_values(){
+
+   is_valid(Körpergröße);
+   is_valid(Körpergewicht);
+   is_valid(Alter);
+ }
+
+ function is_valid(Feld){
+   if (Feld.innerHTML == ""){
+     alert("Bitte fülle das Feld aus: " + Feld);
+     exit();
+   }
+ }
+
+  function is_checked(){
+    var Checkbox =  document.getElementById("checkDisclaimar");
+    if (Checkbox.checked == false){
+      alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
       exit();
     }
   }
+  // Berechnungen
 
-   function is_checked(){
-     var Checkbox =  document.getElementById("checkDisclaimar");
-     if (Checkbox.checked == false){
-       alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
-       exit();
-     }
-   }
-   // Berechnungen
+  function berechne(){
+    if(Geschlecht == "weiblich"){
+      berechne_GKW_Frau();
+    }
+    if(Geschlecht == "männlich"){
+      berechne_GKW_Mann();
+    }
 
-   function berechne(){
 
-      alert("start berechne");
-     if(Geschlecht == "weiblich"){
-       berechne_GKW_Frau();
-     }
-     if(Geschlecht == "männlich"){
-       berechne_GKW_Mann();
-     }
+   /* for(var i = 0; i = newId; i++){
+      if(i==0){
 
-    var BAK_Anfangswert = berechne_BAK();
-    // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
+      }
+    }*/
+   var BAK_Anfangswert = berechne_BAK();
+   // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
 
-    alert("GKW: " + GKW);
-    alert("BAK: " + BAK_Anfangswert);
+   alert("GKW: " + GKW);
+
+   alert("BAK: " + BAK_Anfangswert);
+ }
+    //Berechnung der Tatsächlichen Werte nach dem Trinken
+  function berechne_GKW_Frau(){
+    GKW = -2,097 + (0,1069 * Körpergröße) + (0,2466 * Körpergewicht);
   }
-     //Berechnung der Tatsächlichen Werte nach dem Trinken
-   function berechne_GKW_Frau(){
-     GKW = -2,097 + (0,1069 * Körpergröße) + (0,2466 * Körpergewicht);
-   }
 
-   function berechne_GKW_Mann(){
-     GKW = 2,447 - (0,09516 * Alter) + (0,1074 * Körpergröße) + (0,3362 * Körpergewicht);
+  function berechne_GKW_Mann(){
+    GKW = 2,447 - (0,09516 * Alter) + (0,1074 * Körpergröße) + (0,3362 * Körpergewicht);
 
-   }
+  }
 
-   function berechne_BAK(){
-     BAK_Anfangswert = (0,8 * A) / GKW;
-   }
+  function berechne_BAK(){
+    BAK_Anfangswert = (0,8 * A) / GKW;
+  }
+
 
 
   </script>
