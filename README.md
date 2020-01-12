@@ -1,5 +1,28 @@
 # don-t-drink-and-drive Doocumentation
 
+##index
+
+  * Probleme und Einstufung der Probleme
+  * index.html
+    * Funktion
+  * script.js
+    * Funktion
+  * style.css
+    * Funktion
+  * Aufgabenverteilung
+
+## Probleme und Einstufung der Probleme
+
+|                                                     |niedrig|mittel| hoch |gelöst|
+|:---------------------------------------------------:|:-----:|:----:|:----:|:----:|
+|Veränderung des Styles von Elementen                 |   X   |      |      |   X  |
+|zweiter Tab war unter erstem Tab immer sichtbar      |       |   X  |      |   X  |
+|visible setzen im JavaScript funktioniert nicht      |   X   |      |      |   X  |
+|Getränke container hinzufügen                        |       |      |   X  |   X  |
+|Getränke dynamisch hinzufügen (1)                    |       |      |   X  |      |
+|Aktive Tabs farblich hinterlegen                     |   X   |      |      |   X  |
+
+  (1) Trotz viel Aufwand konnte das Problem nicht mittels php gelöst werden und musste hartgecoded hinzugefügt werden, da sonst die ganze Webseite nicht funktioniert hätte.
 
 
 ## index.html
@@ -30,11 +53,10 @@ Funktion *berechne* schaut welche der beiden Formeln anhand des Inputs verwendet
 
 Funktion *berechne_GKW_Frau*, *berechne_GKW_Mann*, *berechne_BAK* Formeln für die Berechnung.
 
-### geringe Probleme
+### Bearbeiter
 
-schwierigkeiten beim verändern von styles von Elementen
-Dinge konnten im javascript nicht visible gesetzt werden
-aktive taps konnten nicht Farblich anders hinterlegt werden
+Maria Seiser
+Katharina Jank
 
 
 
@@ -46,3 +68,18 @@ aktive taps konnten nicht Farblich anders hinterlegt werden
 
 
 ## script.js
+
+
+
+
+
+## Aufgabenverteilung
+
+|                                                     |    Bearbeiter    |
+|:---------------------------------------------------:|:----------------:|
+|HTML                                                 |   Maria Seiser   |
+|HTML                                                 |  Katharina Jank  |
+|JavaScript                                           |   Tamara David   |
+|CSS                                                  |   Maria Seiser   |
+|Dokumentation                                        |  Katharina Jank  |
+|Präsentation                                         |        Alle      |
