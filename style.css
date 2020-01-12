@@ -40,10 +40,13 @@ header{
 
 
 .ergebnis-container{
+  padding-top: 160px;
   margin-top: 30px;
   grid-column: 1;
   grid-row: 3;
   display: grid;
+  grid-template-columns: 40em 40em;
+  grid-template-rows: 34em 34em;
 }
 
 
@@ -339,7 +342,12 @@ button a{
   padding-right: 10px;
 }
 
+figcaption {
+  margin-left: 2em;
+  font-size: 20px;
+  color:	 #003300;
 
+}
 
 .graph {
   grid-row:1;
@@ -348,7 +356,7 @@ button a{
   padding-left:2em;
   background-color: #ffe6e6;
   height: 30em;
-  width:40em;
+  width: 40em;
   border-radius: 1em;
 }
 
@@ -356,4 +364,60 @@ button a{
   stroke: #ccc;
   stroke-dasharray: 0;
   stroke-width: 1;
+}
+
+
+.chart2{
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.chart3{
+  grid-row: 2;
+  grid-column:1;
+}
+
+$primaryColor: #0074d9;
+
+ circle {
+ fill: #ddd;
+  stroke: $primaryColor;
+  stroke-width: 50;
+  stroke-dasharray: 0 158;
+  transition: stroke-dasharray .3s ease;
+}
+
+.svg {
+  margin: 0 auto;
+  transform: rotate(-90deg);
+  background: #ddd;
+  border-radius: 50%;
+  display: block;
+}
+.buttons {
+  margin-left:2em;
+  margin-bottom: 30px;
+}
+
+button {
+  text-transform: capitalize;
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  margin-right: 5px;
+  background-color: #00cc99;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 2px;
+  transition: background-color .1s ease, color .2s ease;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &.active {
+    font-weight: 400;
+    background-color: $primaryColor;
+    color: white;
+  }
 }
