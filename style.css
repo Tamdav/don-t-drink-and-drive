@@ -12,8 +12,7 @@ header{
 
 .body-wrapper {
   display: grid;
-  grid-template-rows: 30em 70em 60em;
-  margin-left: 2em;
+  grid-template-rows: 30em 60em 60em;
 }
 
 .info-container{
@@ -33,7 +32,7 @@ header{
   display: grid;
   height: auto;
   align-content: center;
-  grid-template-columns: 15em 15em 40em;
+  grid-template-columns: 15em 15em 30em 23em;
   grid-gap: 10px;
 }
 
@@ -153,9 +152,10 @@ input {
     margin-bottom: 10px;
     width: 8em;
     height: 18px;
-    color: #5e5e5e;
-    border-style: solid;
+    border-style: none;
     border-radius: 5px;
+    padding:2px;
+    padding-left: 2px;
 }
 
 .zeit-daten {
@@ -174,14 +174,11 @@ input {
 }
 
 .drinks-daten-container {
-    width: 40em;
-    margin-left: 1em;
     border: none;
     border-radius: 1em;
     background-color: #f3d8e1;
     display: grid;
-    grid-template-rows: 3em 15em 5em 10em;
-    grid-gap: 0em;
+    grid-template-rows: 3em 15em;
     position: inherit;
     height: auto;
 }
@@ -202,10 +199,18 @@ input {
   grid-gap: 8px;
 }
 
+.input-dialog{
+  grid-row: 1;
+  grid-column: 4;
+  border-radius: 10px;
+  margin-left: 2em;
+  display:grid;
+  grid-template-rows: 5em 13em;
+}
 .plusGetraenk-container {
-  background-color: 	 #ffcccc;
+  background-color: #ffcccc;
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 1;
   padding-left: 1em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -214,7 +219,7 @@ input {
 .submit-dialog {
   padding-top:1em;
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 2;
   padding-left: 1em;
   padding-bottom: 2em;
   background-color: #ffe6e6;
@@ -234,24 +239,36 @@ input {
   grid-column: 1;
   grid-row: 1;
 }
-#mengenAngabe{
+.mengen-container{
   margin: 10px;
+  display: grid;
+  grid-template-columns: 3em 5em 5em;
+
+}
+.menge-label{
+  grid-column: 1;
+  grid-row: 1;
 }
 
-#metrik {
-    width: 6em;
-    margin-left: 1em;
-    padding: 7px 14px;
-    border: none;
-    border-radius: 2px;
-    background-color: #ffffff;
-    margin-right: 26em;
+.menge {
+  grid-column: 2;
+  grid-row: 1;
+  width: 4em;
+  height: 18px;
 }
 
-#menge {
-    width: 6em;
-    height: 24px;
+.metrik-container {
+  grid-column: 3;
+  grid-row: 1;
+  width: 6em;
+  height: 20px;
+  margin-left: 1em;
+  border: none;
+  border-radius: 2px;
+  background-color: #ffffff;
 }
+
+
 
 #getraenkeListe {
     margin: 10px;
@@ -279,6 +296,9 @@ input {
   margin-top: 1em;
 }
 
+#berechneDaten{
+  margin-top: 10px;
+}
 button {
   height: 3em;
   width: 100px;
