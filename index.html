@@ -248,9 +248,9 @@
 
   //-----------------------------///
   var Geschlecht = document.getElementById("geschlecht").value;
-  var Koerpergroesse = document.getElementById("groesse").innerText;
-  var Koerpergewicht = document.getElementById("gewicht").innerText;
-  var Alter = document.getElementById("alter").innerText;
+  var Koerpergroesse = document.getElementById("groesse").value;
+  var Koerpergewicht = document.getElementById("gewicht").value;
+  var Alter = document.getElementById("alter").value;
  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
  // var Trinkende = document.getElementById("ende").innerHTML;
   var A = 0;
@@ -328,7 +328,7 @@
  }
     //Berechnung der Tatsächlichen Werte nach dem Trinken
   function berechne_GKW_Frau(){
-    GKW = 1.055 * (2.097 + 0.1069 * Koerpergroesse + 0.2466 * Koerpergewicht);
+    GKW = 1.055 * (-2.097 + 0.1069 * Koerpergroesse + 0.2466 * Koerpergewicht);
   }
 
   function berechne_GKW_Mann(){
@@ -343,7 +343,6 @@
 
   function berechne_BAK(){
     BAK = (0.8 * A) / GKW;
-    while(BAK > 1){ BAK -= 1;}
   }
 
 
@@ -354,9 +353,14 @@ function getA(){
    let metrik = document.querySelector('#metrik').value;
    let menge = document.getElementById("menge").value;
 
-   alert("Alk: " + alkoholgehalt);
+   alert("Größe: " + Koerpergroesse);
+   alert("Alter: " + Alter);
+   alert("Gewicht: " + Koerpergewicht);
+   alert("Geschlecht: " + Geschlecht)
+
+   alert("alkoholgehalt: " + alkoholgehalt);
    alert("metrik: " + metrik);
-   alert("menge: " + menge);
+   alert("Gewählte menge: " + menge);
 
 
    if(metrik == "cl"){
@@ -365,7 +369,7 @@ function getA(){
    if(metrik == "l"){
      menge = menge * 1000;
    }
-
+   alert ("Menge in ml: " + menge);
    A = menge * alkoholgehalt * newId;
 
 
