@@ -251,7 +251,7 @@
   var Koerpergroesse = document.getElementById("groesse").value;
   var Koerpergewicht = document.getElementById("gewicht").value;
   var Alter = document.getElementById("alter").value;
- // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
+ // var Trinkstart = document.getElementById("anfang").innerHTML;
  // var Trinkende = document.getElementById("ende").innerHTML;
   var Getränke_Liste_Array = new Array();   //Alle ausgewählten Getränke in einer Liste
   var A = 0;
@@ -374,8 +374,8 @@ function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
        menge = menge * 1000;
      }
      alert ("Menge in ml: " + menge);
-     Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge);
      A_neu = menge * alkoholgehalt;
+     Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu); //A_neu ist alk-gehalt aufgerechnet auf die Menge
 
 }
 
