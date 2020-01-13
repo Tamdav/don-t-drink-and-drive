@@ -1,6 +1,6 @@
 # don-t-drink-and-drive Doocumentation
 
-##index
+## index
 
   * Probleme und Einstufung der Probleme
   * index.html
