@@ -253,10 +253,12 @@
   var Alter = document.getElementById("alter").value;
  // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
  // var Trinkende = document.getElementById("ende").innerHTML;
+  var Getränke_Liste_Array = new Array();   //Alle ausgewählten Getränke in einer Liste
   var A = 0;
   var GKW = 0
+  var A_neu = 0;
 
-  var newId = 1;
+  var newId = 0;
   var clone;
   var BAK;
  // var Tinkeende_hours = Trinkende.getHours();
@@ -278,20 +280,10 @@
 
  function duplicate(){
  let clone = document.querySelector('#drinks-listen0').cloneNode(true);
- //
- //   alert("duplicate");
- //   clone.cloneNode(true);
- //   alert("cloneNode");
- // getränkeListe.push(clone.firstElementChild.firstElementChild.nextElementSibling.value);
- //
- //   alert("duplicate");
- // mengen_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.innerHTML);
- // metrik_liste.push(clone.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.value);
- // Change the id attribute of the newly created element:
  clone.setAttribute( 'drinks-listen', ++newId );
 
- // Append the newly created element on element p
  document.querySelector('#duplication_model').appendChild( clone );
+
 }
 
  function validate(){
@@ -349,29 +341,41 @@
 
 function getA(){
 
-   let alkoholgehalt = document.querySelector('#getraenkeListe').value;
-   let metrik = document.querySelector('#metrik').value;
-   let menge = document.getElementById("menge").value;
+    let alkoholgehalt = document.querySelectorAll('#getraenkeListe');
+    let metrik = document.querySelectorAll('#metrik');
+    let menge = document.querySelectorAll('#menge');
 
    alert("Größe: " + Koerpergroesse);
    alert("Alter: " + Alter);
    alert("Gewicht: " + Koerpergewicht);
-   alert("Geschlecht: " + Geschlecht)
-
-   alert("alkoholgehalt: " + alkoholgehalt);
-   alert("metrik: " + metrik);
-   alert("Gewählte menge: " + menge);
+   alert("Geschlecht: " + Geschlecht);
+   //
 
 
-   if(metrik == "cl"){
-     menge = menge * 10;
+   for(var i = 0; i < metrik.length; i++){
+     berechne_A(alkoholgehalt[i].id,alkoholgehalt[i].value,metrik[i].value,menge[i].value, i);
+     A +=  A_neu;
    }
-   if(metrik == "l"){
-     menge = menge * 1000;
-   }
-   alert ("Menge in ml: " + menge);
-   A = menge * alkoholgehalt * newId;
 
+  alert("all drinks alkoholgehalt: " + A);
+
+}
+
+function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
+  alert("alkoholgehalt: " + alkoholgehalt);
+  alert("metrik: " + metrik);
+  alert("Gewählte menge: " + menge);
+
+
+     if(metrik == "cl"){
+       menge = menge * 10;
+     }
+     if(metrik == "l"){
+       menge = menge * 1000;
+     }
+     alert ("Menge in ml: " + menge);
+     Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge);
+     A_neu = menge * alkoholgehalt;
 
 }
 
