@@ -411,11 +411,16 @@ button {
   margin-left: 1em;
 }
 
+.table1{
+  margin-top:2em;
+  margin-right: 1.5em;
+}
+
 .table1 table{
   background-color: #ffe6e6;
   border-color:  #f2e6d9;
   border-radius: 1em;
-  width:45em;
+  width:40em;
   height:10em;
   padding: 20px;
 }
