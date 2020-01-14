@@ -66,7 +66,7 @@
           <p>Koerpergroesse in cm:</p>
           <input id ="groesse" type = "number" min="70" max="300" value= "175"/>
           <p>Koerpergewicht in kg:</p>
-          <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
+          <input id ="gewicht" type = "number" min="30" max="400" value="75"/>
           <p>Alter in J:</p>
           <input id ="alter" type = "number" min="10" max="150" value= "45"/>
             </div>
@@ -279,28 +279,14 @@
   var newId = 0;
   var clone;
   var BAK;
-  // var Tinkeende_hours = Trinkende.getHours();
-  // var Tinkeende_minutes = Trinkende.getMinutes();
-  //
-  // var Uhrzeit = new Date();
-  // var Uhrzeit_Hours = Uhrzeit.getHours()
-  // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
 
-  //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
-  // var getränkeListe[];
-  //   var mengen_liste[];
-  //   var metrik_liste[];
-  //
-  //   getränkeListe.push(document.querySelector('getraenkeListe').value);
-  //   mengen_liste.push(document.querySelector('menge').innerHTML);
-  //   metrik_liste.push(document.querySelector('metrik').value);
 
 
   function duplicate(){
-  let clone = document.querySelector('#drinks-listen0').cloneNode(true);
-  clone.setAttribute( 'drinks-listen', ++newId );
+    let clone = document.querySelector('#drinks-listen0').cloneNode(true);
+    clone.setAttribute( 'drinks-listen', ++newId );
 
-  document.querySelector('#duplication_model').appendChild( clone );
+    document.querySelector('#duplication_model').appendChild( clone );
 
   }
 
@@ -346,7 +332,8 @@
 
   }
 
-  // Für Männer ergibt sich ein BAK: (0,8 x 20) / (1,055 x (2.447 - 0.09516 x 38 + 0.1074 x 179 + 0.3362 x 70)) = 0,36 Promille
+  //BSP:
+  //Für Männer ergibt sich ein BAK: (0,8 x 20) / (1,055 x (2.447 - 0.09516 x 38 + 0.1074 x 179 + 0.3362 x 70)) = 0,36 Promille
   //Für Frauen ergibt sich ein BAK: (0,8 x 20) / (1,055 x (-2.097+0.1069 x 165 + 0.2466 x 58)) = 0,51 Promille
 
 
@@ -360,7 +347,6 @@
   document.getElementById("graphBAK").setAttribute('fill','#333333');
   document.getElementById("graphBAK").setAttribute('height','50');
   document.getElementById("graphBAK").setAttribute('width', BAK*2*100);
-
   }
 
 
@@ -369,12 +355,6 @@
     let alkoholgehalt = document.querySelectorAll('#getraenkeListe');
     let metrik = document.querySelectorAll('#metrik');
     let menge = document.querySelectorAll('#menge');
-
-   alert("Größe: " + Koerpergroesse);
-   alert("Alter: " + Alter);
-   alert("Gewicht: " + Koerpergewicht);
-   alert("Geschlecht: " + Geschlecht);
-   //
 
 
    for(var i = 0; i < metrik.length; i++){

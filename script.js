@@ -73,19 +73,7 @@ var clone;
 var BAK;
 // var Tinkeende_hours = Trinkende.getHours();
 // var Tinkeende_minutes = Trinkende.getMinutes();
-//
-// var Uhrzeit = new Date();
-// var Uhrzeit_Hours = Uhrzeit.getHours()
-// var Uhrzeit_Minutes = Uhrzeit.getMinutes();
 
-//var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
-// var getränkeListe[];
-//   var mengen_liste[];
-//   var metrik_liste[];
-//
-//   getränkeListe.push(document.querySelector('getraenkeListe').value);
-//   mengen_liste.push(document.querySelector('menge').innerHTML);
-//   metrik_liste.push(document.querySelector('metrik').value);
 
 
 function duplicate(){
@@ -123,7 +111,6 @@ function berechne(){
 
 
  berechne_BAK();
- // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
 
 
  alert("BAK: " + BAK);
@@ -166,7 +153,6 @@ function getA(){
  alert("Alter: " + Alter);
  alert("Gewicht: " + Koerpergewicht);
  alert("Geschlecht: " + Geschlecht);
- //
 
 
  for(var i = 0; i < metrik.length; i++){
@@ -192,6 +178,7 @@ alert("Gewählte menge: " + menge);
    }
    alert ("Menge in ml: " + menge);
    A_neu = menge * alkoholgehalt;
-   Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu); //A_neu ist alk-gehalt aufgerechnet auf die Menge
+   Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu);
+    //A_neu ist alk-gehalt aufgerechnet auf die Menge
 
 }
