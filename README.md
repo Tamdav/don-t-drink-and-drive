@@ -30,7 +30,7 @@
 |zweiter Tab war unter erstem Tab immer sichtbar      |       |   X  |      |   X  |
 |visible setzen im JavaScript funktioniert nicht      |   X   |      |      |   X  |
 |Getränke container hinzufügen                        |       |      |   X  |   X  |
-|Getränke dynamisch hinzufügen (1)                    |       |      |   X  |   X  |
+|Getränke dynamisch hinzufügen (1)                    |       |      |   X  |      |
 |Aktive Tabs farblich hinterlegen                     |   X   |      |      |   X  |
 |Ergebnis in Graphik einbinden                        |       |      |   X  |   X  |
 |Richtige Berechnung der Daten                        |       |      |   X  |   X  |

@@ -293,7 +293,7 @@
   function validate(){
    is_checked();
 
-   getA();
+   getA();  //Alkoholgehalt in gramm berechnen
    berechne();
   }
 
@@ -332,10 +332,9 @@
 
   }
 
-  //BSP:
-  //Für Männer ergibt sich ein BAK: (0,8 x 20) / (1,055 x (2.447 - 0.09516 x 38 + 0.1074 x 179 + 0.3362 x 70)) = 0,36 Promille
-  //Für Frauen ergibt sich ein BAK: (0,8 x 20) / (1,055 x (-2.097+0.1069 x 165 + 0.2466 x 58)) = 0,51 Promille
 
+  //Für Männer ergibt sich ein BAK: (0,8 x Alokoholgehalt in gramm) / (1,055 x (2.447 - 0.09516 x Alter + 0.1074 x Koerpergroesse + 0.3362 x Koerpergewicht)) = xxxx Promille
+  //Für Frauen ergibt sich ein BAK: (0,8 x Alokoholgehalt in gramm) / (1,055 x (-2.097+0.1069 x Koerpergroesse + 0.2466 x Koerpergewicht)) = xxx Promille
 
 
   function berechne_BAK(){
@@ -362,14 +361,14 @@
      A +=  A_neu;
    }
 
-  alert("all drinks alkoholgehalt: " + A);
+  alert("all drinks alkoholgehalt in Gramm: " + A);
 
   }
 
   function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
-  alert("alkoholgehalt: " + alkoholgehalt);
-  alert("metrik: " + metrik);
-  alert("Gewählte menge: " + menge);
+    alert("alkoholgehalt in Gramm: " + alkoholgehalt);
+    alert("metrik: " + metrik);
+    alert("Gewählte menge: " + menge);
 
 
      if(metrik == "cl"){
@@ -380,7 +379,8 @@
      }
      alert ("Menge in ml: " + menge);
      A_neu = menge * alkoholgehalt;
-     Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu); //A_neu ist alk-gehalt aufgerechnet auf die Menge
+     Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu);
+     //A_neu ist alk-gehalt aufgerechnet auf die Menge
 
   }
 
