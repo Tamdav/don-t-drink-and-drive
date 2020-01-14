@@ -342,6 +342,7 @@ button a{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5em;
 }
 
 .chart1 circle {
@@ -405,9 +406,9 @@ button {
   height:10em;
   margin-top: 2em;
   padding: 20px;
-
 }
 .chart2 figure{
+  margin-left: 1em;
 }
 
 .table1 table{
@@ -451,4 +452,8 @@ g text {
   color: #333333;
   weight:bold;
   font-size: 20px;
+}
+
+.chart3{
+  margin:2em;
 }
