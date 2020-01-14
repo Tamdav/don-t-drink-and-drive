@@ -3,13 +3,15 @@
 
   <head>
   <title>PromilleRechner</title>
-    <script language="javascript" type="text/javascript" charset="utf-8" src="script.js"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 75b362101d8c6a03cd3e90ec892010d044047adf
+=======
+>>>>>>> 24835cc98eec3bcaa135c792b7a23c6d69a486b3
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <nav id="main-nav">
             <div id ="nav" class="main-nav-ul">
                 <button id="ibtn" class="link-btn"><a href="#info">Info</a></button>
-                <button id="bbtn" class="link-btn" onclick="changeVisibility()"><a href ="#berechnen">Berechnen</a></button>
+                <button id="bbtn" class="link-btn"><a href ="#berechnen">Berechnen</a></button>
                 <button id="ebtn" class="link-btn"><a href="#ergebnis">Ergebnis</a></button>
             </div>
         </nav>
@@ -29,7 +31,6 @@
             <ul class="info-nav-ul">
                 <li ><a href="#erklärung">Warum Promille rechner?</a></li>
                 <li><a href="#mathe-beruendung">Wie Promille rechnen?</a></li>
-                <li><a href="#disclaimar">Disclaimar</a></li>
             </ul>
         </nav>
         <div class="info-inhalt-container">
@@ -38,7 +39,7 @@
                 <p>
                     Ein Promille steht für das Verhältnis 1:1000 und wird hauptsächlich in Verbindung mit Alkoholkonsum
                     verwendet. Grundsätzlich kann man sagen, dass 1 Promille 1 Gramm Alkohol in 1 Kilogramm Blut gleicht.</br>
-                    Der Promille-Rechner berechnet unter Berücksichtigung von Geschlecht, Körpergröße und -gewicht, Alter,
+                    Der Promille-Rechner berechnet unter Berücksichtigung von Geschlecht, Koerpergroesse und -gewicht, Alter,
                     Trink-Start und -Ende und dem Alkoholgehalt der getrunkenen Getränke den Promille-Anteil im Blut des
                     Konsumenten. </p>
                     Die Berechnungen auf dieser Seite sollen dazu Beitragen ein besseres Verständnis für Alkohol und seine
@@ -51,19 +52,11 @@
                 <p>
                   Unsere Berechnung erfolgt mithilfe der Watson-Formel. Die Formel lautet: </p></p>
                   Blutalkoholkonzentration (BAK) Männer = (0,8 x [Alkoholmenge in Gramm]) / (1,055 x (2.447 - 0.09516 x
-                  [Alter in Jahren] + 0.1074 x [Größe in cm] + 0.3362 x [Körpergewicht in kg]))</p></p>
+                  [Alter in Jahren] + 0.1074 x [Größe in cm] + 0.3362 x [Koerpergewicht in kg]))</p></p>
                   Blutalkoholkonzentration (BAK) Frauen = (0,8 x [Alkoholmenge in Gramm]) / (1,055 x (-2.097+0.1069 x
-                  [Größe in cm] + 0.2466 x [Körpergewicht in kg]))</p></p>
+                  [Größe in cm] + 0.2466 x [Koerpergewicht in kg]))</p></p>
                   Für ein genaueres Ergebnis wird der Beginn und das Ende des Alkoholkonsums berücksichtigt. Aus dem Ergebnis wird
                   ein Graph erstellt, der den ungefähren Alkoholspiegel im Konsumzeitraum wiederspiegelt.
-                </p>
-            </section>
-
-            <section id="disclaimar">
-                <h3>Disclaimar</h3>
-                <p>
-                  Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
-                  verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll und in Maßen konsumiert werden.
                 </p>
             </section>
             <div>
@@ -77,10 +70,10 @@
             <option value ="weiblich">weiblich</option>
             <option value ="männlich">männlich</option>
           </select>
-          <p>Körpergröße in cm:</p>
+          <p>Koerpergroesse in cm:</p>
           <input id ="groesse" type = "number" min="70" max="300" value= "175"/>
-          <p>Körpergewicht in kg:</p>
-          <input id ="gewicht" type = "number" min="30" max="400" value="70"/>
+          <p>Koerpergewicht in kg:</p>
+          <input id ="gewicht" type = "number" min="30" max="400" value="75"/>
           <p>Alter in J:</p>
           <input id ="alter" type = "number" min="10" max="150" value= "45"/>
             </div>
@@ -99,24 +92,24 @@
                         <div id="drinks-liste" class="drinks-liste-container">
                           <p id="getraenkNr">Getränk:</p>
                           <select id="getraenkeListe" size="5">
-                          <option value="0,016" id="Radler">Radler: 0,016 gramm pro ml</option>
-                            <option value="0,04" id="Bier">Bier: 0,04 gramm pro ml</option>
-                            <option value="0,064" id="Starkbier">Starkbier: 0,064 gramm pro ml</option>
-                            <option value="0,048" id="Most">Most: 0,048 gramm pro ml</option>
-                            <option value="0,104" id="Sekt">Sekt: 0,104 gramm pro ml</option>
-                            <option value="0,088" id="Weißwein">Weißwein: 0,088 gramm pro ml</option>
+                          <option value="0.016" id="Radler">Radler: 0,016 gramm pro ml</option>
+                            <option value="0.04" id="Bier">Bier: 0,04 gramm pro ml</option>
+                            <option value="0.064" id="Starkbier">Starkbier: 0,064 gramm pro ml</option>
+                            <option value="0.048" id="Most">Most: 0,048 gramm pro ml</option>
+                            <option value="0.104" id="Sekt">Sekt: 0,104 gramm pro ml</option>
+                            <option value="0.088" id="Weißwein">Weißwein: 0,088 gramm pro ml</option>
                             <option value="1" id="Rotwein">Rotwein: 1 gramm pro ml</option>
-                            <option value="0,064" id="Met">Met: 0,064 gramm pro ml</option>
-                            <option value="0,16" id="Likör">Likör: 0,16 gramm pro ml</option>
-                            <option value="0,255" id="Korn">Korn: 0,255 gramm pro ml</option>
-                            <option value="0,32" id="Barcadi">Barcadi: 0,32 gramm pro ml</option>
-                            <option value="0,64" id="Rum">Rum: 0,64 gramm pro ml</option>
-                            <option value="0,34" id="Obstbrand">Obstbrand: 0,34 gramm pro ml</option>
+                            <option value="0.064" id="Met">Met: 0,064 gramm pro ml</option>
+                            <option value="0.16" id="Likör">Likör: 0,16 gramm pro ml</option>
+                            <option value="0.255" id="Korn">Korn: 0,255 gramm pro ml</option>
+                            <option value="0.32" id="Barcadi">Barcadi: 0,32 gramm pro ml</option>
+                            <option value="0.64" id="Rum">Rum: 0,64 gramm pro ml</option>
+                            <option value="0.34" id="Obstbrand">Obstbrand: 0,34 gramm pro ml</option>
                             </select>
                         </div>
                         <div id="mengenAngabe" class="mengen-container">
                             <label class ="menge-label">Menge:</label>
-                            <input id="menge" type="number" min="0" value="0"class="menge"/>
+                            <input id="menge" type="number" min="0" value="0"class="menge-container"/>
                             <select id="metrik" name="metrik" class="metrik-container">
                                 <option value="ml" id="ml">ml</option>
                                 <option value="cl" id="cl">cl</option>
@@ -144,158 +137,104 @@
             </div>
           </section>
     <section id="ergebnis" class="ergebnis-container">
-        <div id="chart2">
-          <figure>
-          <figcaption>
-            AlkoholProzente Vergleich von 500ml/Alkohol:
-          </figcaption>
+    <div class="chart1">
+      <figure>
+        <figcaption>
+          Alkohl in g pro 500ml in Abhängigkeit von der Sorte.
+        </figcaption>
 
-          <div class="buttons"></div>
-          <svg width="300" height="300" class="chart">
-            <circle r="100" cx="200" cy="200" class="pie"/>
-          </svg>
+        <div class="buttons"></div>
+        <svg width="200" height="200" class="chart">
+        <circle r="50" cx="100" cy="100" class="pie"/>
+        </svg>
         </figure>
+      </div>
+        <div class="chart2">
+          <figure>
+            <figcaption>
+              Dein Alkoholpegel und die lt.österreichischem Gesetz strafbaren Grenzen
+            </figcaption>
+            <svg id="svg2" width='100%' height='80px' viewBox='0 0 1130 80'>
+            <g class='bars'>
+              <rect fill='#ccc' width='100%' height='50'></rect>
+              <rect id ="graphBAK"></rect>
+            </g>
+            <g class='markers'>
+              <rect fill='#001f3f' x='0%' y='0' width='2px' height='60'></rect>
+              <rect fill='#001f3f' x='5%' y='0' width='2px' height='60'></rect>
+              <rect fill='#001f3f' x='10%' y='0' width='2px' height='60'></rect>
+              <rect fill='#001f3f' x='15.8%' y='0' width='2px' height='60'></rect>
+              <rect fill='#001f3f' x='23.8%' y='0' width='2px' height='60'></rect>
+              <rect fill='#001f3f' x='31.8%' y='0' width='2px' height='60'></rect>
+              <rect text-anchor='' fill='#001f3f' x='180%' y='0' width='2px' height='60'></rect>
+            </g>
+            <g>
+              <text  x='0%' y='80'>0</text>
+              <text  x='5%' y='80'>0.1</text>
+              <text  x='10%' y='80'>0.5</text>
+              <text  x='15.8%' y='80'>0.79</text>
+              <text  x='23.8%' y='80'>1.19</text>
+              <text  x='31.8%' y='80'>1.59</text>
+            </g>
+            </svg>
+
+            </figure>
+            <div class= "table1">
+              <table>
+                <tr>
+                <th>Promille Grenzen</th>
+                <th>Information</th>
+                </tr>
+                <tr>
+                  <td>0.5...0.79</td>
+                  <td><p>Gilt nur für Probeführerschein-Besitzer sowie Lkw- und Busfahrer.</p></td>
+                </tr>
+                <tr>
+                  <td>0.8...1.19</td>
+                  <td><p>Strafe von 800€ bis 3.700€. Bei erstem Vergehen 1 Monat Führerscheinentzug.
+                    Bei Wiederholung min. 3 Monate.</p></td>
+                </tr>
+                <tr>
+                  <td>1.20...1.59</td>
+                  <td><p>Strafe von 1.200€ bis 4.400€. Mindestens 4 Monate Führerscheinentzug.
+                    Bei Wiederholung min. 3 Monate</p></td>
+                </tr>
+                <tr>
+                  <td>ab 1.60</td>
+                  <td><p>Strafe von 1.600€ bis 5.900€. Mindestens 6 Monate Führerscheinentzug.
+                    Nachschulung und zusätzliche Kosten von ca 863€, Amtsarzt und verkehrpsychologische Untersuchung.</p></td>
+                </tr>
+              </table>
+            <a href="https://www.oeamtc.at/thema/vorschriften-strafen/alkohol-am-steuer-was-alkoholisierten-lenkern-bluehen-kann-16179524">Quelle: Oamtc Vorschriften-Strafen Alkohol Am Steuer</a>
         </div>
-        <div id="chart3"></div>
+        </div>
+
       </section>
 
-<<<<<<< HEAD
+  </div>
   <script>
-
-  function getDataValueX()
-  {
-    return 100;
-  }
-  function getDataValue1()
-  {
-    return 1.1;
-  }
-
-
-  //-----------------------------///
-  var Geschlecht = document.getElementById("geschlecht").value;
-  var Körpergröße = document.getElementById("groesse").value;
-  var Körpergewicht = document.getElementById("gewicht").value;
-  var Alter = document.getElementById("alter").value;
- // var Trinkstart = document.getElementById("anfang").innerHTML; //Nicht notwendig
- // var Trinkende = document.getElementById("ende").innerHTML;
-  var A = 0;
-  var GKW = 0
-
-  var newId = 0;
-  var clone;
- //
- // var Tinkeende_hours = Trinkende.getHours();
- // var Tinkeende_minutes = Trinkende.getMinutes();
- //
- // var Uhrzeit = new Date();
- // var Uhrzeit_Hours = Uhrzeit.getHours()
- // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
-
- //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
-
-
-
- function duplicate(){
- let clone = document.querySelector('#drinks-listen').cloneNode( true );
-
- // Change the id attribute of the newly created element:
- clone.setAttribute( 'clone', ++newId );
-
- // Append the newly created element on element p
- document.querySelector('#duplication_model').appendChild( clone );
-
- }
-
- function validate(){
-   is_checked();
-   check_all_values();
-
-   //A muss noch beachtet werden
-   berechne();
- }
-
- //Check ob alle Daten vorhanden
- function check_all_values(){
-
-   is_valid(Körpergröße);
-   is_valid(Körpergewicht);
-   is_valid(Alter);
- }
-
- function is_valid(Feld){
-   if (Feld.innerHTML == ""){
-     alert("Bitte fülle das Feld aus: " + Feld);
-     exit();
-   }
- }
-
-  function is_checked(){
-    var Checkbox =  document.getElementById("checkDisclaimar");
-    if (Checkbox.checked == false){
-      alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
-      exit();
-    }
-  }
-  // Berechnungen
-
-  function berechne(){
-    if(Geschlecht == "weiblich"){
-      berechne_GKW_Frau();
-    }
-    if(Geschlecht == "männlich"){
-      berechne_GKW_Mann();
-    }
-
-
-   /* for(var i = 0; i = newId; i++){
-      if(i==0){
-
-      }
-    }*/
-   var BAK_Anfangswert = berechne_BAK();
-   // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
-
-   alert("GKW: " + GKW);
-
-   alert("BAK: " + BAK_Anfangswert);
- }
-    //Berechnung der Tatsächlichen Werte nach dem Trinken
-  function berechne_GKW_Frau(){
-    GKW = -2,097 + (0,1069 * Körpergröße) + (0,2466 * Körpergewicht);
-  }
-
-  function berechne_GKW_Mann(){
-    GKW = 2,447 - (0,09516 * Alter) + (0,1074 * Körpergröße) + (0,3362 * Körpergewicht);
-
-  }
-
-  function berechne_BAK(){
-    BAK_Anfangswert = (0,8 * A) / GKW;
-  }
-
-  var total = 158,
+  var total = 573,
       buttons = document.querySelector('.buttons'),
       pie = document.querySelector('.pie'),
       activeClass = 'active';
 
-  var alcohol = {
-    bier: 60,
-    weisswein : 5,
-    rotwein: 9,
-    sekt: 1,
-    barcadi: 15,
-    rum: 12
+  var continents = {
+    bier: 20,
+    weisswein : 22,
+    rotwein: 25,
+    sekt: 26,
+    barcadi: 160,
+    rum: 320
   };
 
   // work out percentage as a result of total
   var numberFixer = function(num){
-    var result = ((num * total) / 100);
+    var result = ((num * total) / 1000);
     return result;
   }
 
   // create a button for each country
-  for(property in alcohol){
+  for(property in continents){
     var newEl = document.createElement('button');
     newEl.innerText = property;
     newEl.setAttribute('data-name', property);
@@ -332,14 +271,139 @@
   setPieChart('bier');
   setActiveClass(buttons.children[0]);
 
+  //-----------------------------///
+  var Geschlecht = document.getElementById("geschlecht").value;
+  var Koerpergroesse = document.getElementById("groesse").value;
+  var Koerpergewicht = document.getElementById("gewicht").value;
+  var Alter = document.getElementById("alter").value;
+  // var Trinkstart = document.getElementById("anfang").innerHTML;
+  // var Trinkende = document.getElementById("ende").innerHTML;
+  var Getränke_Liste_Array = new Array();   //Alle ausgewählten Getränke in einer Liste
+  var A = 0;
+  var GKW = 0
+  var A_neu = 0;
+
+  var newId = 0;
+  var clone;
+  var BAK;
+
+
+
+  function duplicate(){
+    let clone = document.querySelector('#drinks-listen0').cloneNode(true);
+    clone.setAttribute( 'drinks-listen', ++newId );
+
+    document.querySelector('#duplication_model').appendChild( clone );
+
+  }
+
+  function validate(){
+   is_checked();
+
+   getA();
+   berechne();
+  }
+
+
+  function is_checked(){
+    var Checkbox =  document.getElementById("checkDisclaimar");
+    if (Checkbox.checked == false){
+      alert('Bitte Verifiziern Sie, dass der Hinweis gelesen wurde, um Ergebnis zu erhalten!');
+      exit();
+    }
+  }
+  // Berechnungen
+
+  function berechne(){
+    if(Geschlecht == "weiblich"){
+      berechne_GKW_Frau();
+    }
+    if(Geschlecht == "männlich"){
+      berechne_GKW_Mann();
+    }
+
+
+   berechne_BAK();
+   // var BAK_Restalkohol = berechne_aktuellen_Bak_Wert(BAK_Anfangswert);
+
+
+   alert("BAK: " + BAK);
+  }
+    //Berechnung der Tatsächlichen Werte nach dem Trinken
+  function berechne_GKW_Frau(){
+    GKW = 1.055 * (-2.097 + 0.1069 * Koerpergroesse + 0.2466 * Koerpergewicht);
+  }
+
+  function berechne_GKW_Mann(){
+    GKW = 1.055 *(2.447 - 0.09516 * Alter + 0.1074 * Koerpergroesse + 0.3362 * Koerpergewicht);
+
+  }
+
+  //BSP:
+  //Für Männer ergibt sich ein BAK: (0,8 x 20) / (1,055 x (2.447 - 0.09516 x 38 + 0.1074 x 179 + 0.3362 x 70)) = 0,36 Promille
+  //Für Frauen ergibt sich ein BAK: (0,8 x 20) / (1,055 x (-2.097+0.1069 x 165 + 0.2466 x 58)) = 0,51 Promille
+
+
+
+  function berechne_BAK(){
+    BAK = (0.8 * A) / GKW;
+    setGraphBAK();
+  }
+
+  function setGraphBAK(){
+  document.getElementById("graphBAK").setAttribute('fill','#333333');
+  document.getElementById("graphBAK").setAttribute('height','50');
+  document.getElementById("graphBAK").setAttribute('width', BAK*2*100);
+  }
+
+
+  function getA(){
+
+    let alkoholgehalt = document.querySelectorAll('#getraenkeListe');
+    let metrik = document.querySelectorAll('#metrik');
+    let menge = document.querySelectorAll('#menge');
+
+
+   for(var i = 0; i < metrik.length; i++){
+     berechne_A(alkoholgehalt[i].id,alkoholgehalt[i].value,metrik[i].value,menge[i].value, i);
+     A +=  A_neu;
+   }
+
+  alert("all drinks alkoholgehalt: " + A);
+
+  }
+
+  function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
+  alert("alkoholgehalt: " + alkoholgehalt);
+  alert("metrik: " + metrik);
+  alert("Gewählte menge: " + menge);
+
+
+     if(metrik == "cl"){
+       menge = menge * 10;
+     }
+     if(metrik == "l"){
+       menge = menge * 1000;
+     }
+     alert ("Menge in ml: " + menge);
+     A_neu = menge * alkoholgehalt;
+     Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu); //A_neu ist alk-gehalt aufgerechnet auf die Menge
+
+  }
+
   </script>
-=======
->>>>>>> 75b362101d8c6a03cd3e90ec892010d044047adf
-  </div>
+
+
+  <footer>
+    <p>Webdesign by DJS, &copy Gruppe 6 WS19/20</p>
+  </footer>
 </body>
 
+<<<<<<< HEAD
 <footer>
 <p>&copy; 2020 Gruppe 6<p>
 </footer>
 
+=======
+>>>>>>> 24835cc98eec3bcaa135c792b7a23c6d69a486b3
 </html>
