@@ -15,7 +15,7 @@
         <nav id="main-nav">
             <div id ="nav" class="main-nav-ul">
                 <button id="ibtn" class="link-btn"><a href="#info">Info</a></button>
-                <button id="bbtn" class="link-btn" onclick="changeVisibility()"><a href ="#berechnen">Berechnen</a></button>
+                <button id="bbtn" class="link-btn"><a href ="#berechnen">Berechnen</a></button>
                 <button id="ebtn" class="link-btn"><a href="#ergebnis">Ergebnis</a></button>
             </div>
         </nav>
@@ -25,7 +25,6 @@
             <ul class="info-nav-ul">
                 <li ><a href="#erklärung">Warum Promille rechner?</a></li>
                 <li><a href="#mathe-beruendung">Wie Promille rechnen?</a></li>
-                <li><a href="#disclaimar">Disclaimar</a></li>
             </ul>
         </nav>
         <div class="info-inhalt-container">
@@ -52,14 +51,6 @@
                   [Größe in cm] + 0.2466 x [Koerpergewicht in kg]))</p></p>
                   Für ein genaueres Ergebnis wird der Beginn und das Ende des Alkoholkonsums berücksichtigt. Aus dem Ergebnis wird
                   ein Graph erstellt, der den ungefähren Alkoholspiegel im Konsumzeitraum wiederspiegelt.
-                </p>
-            </section>
-
-            <section id="disclaimar">
-                <h3>Disclaimar</h3>
-                <p>
-                  Die Information auf dieser Website soll keinenfalls dazu genutzt werden, zu entscheiden ob man noch
-                  verkehrstüchtigt ist oder nicht. Alkohol sollte verantwortungsvoll und in Maßen konsumiert werden.
                 </p>
             </section>
             <div>
@@ -140,8 +131,7 @@
             </div>
           </section>
     <section id="ergebnis" class="ergebnis-container">
-
-      <div class="chart1">
+    <div class="chart1">
       <figure>
         <figcaption>
           Alkohl in g pro 500ml in Abhängigkeit von der Sorte.
@@ -153,7 +143,6 @@
         </svg>
         </figure>
       </div>
-
         <div class="chart2">
           <figure>
             <figcaption>
@@ -162,7 +151,7 @@
             <svg id="svg2" width='100%' height='80px' viewBox='0 0 1132 65'>
             <g class='bars'>
               <rect fill='#ccc' width='190%' height='50'></rect>
-              <rect fill='#333333' width='28%' height='50'></rect>
+              <rect id ="graphBAK"></rect>
             </g>
             <g class='markers'>
               <rect fill='#001f3f' x='0%' y='0' width='2px' height='60'></rect>
@@ -181,11 +170,42 @@
               <text  x='119%' y='80'>1.19</text>
               <text  x='159%' y='80'>1.59</text>
             </g>
-          </svg>
+            </svg>
 
             </figure>
+
             <a href="https://www.oeamtc.at/thema/vorschriften-strafen/alkohol-am-steuer-was-alkoholisierten-lenkern-bluehen-kann-16179524">Quelle: Oamtc Vorschriften-Strafen Alkohol Am Steuer</a>
         </div>
+        <div class="chart3">
+        </div>
+        <div class= "table1">
+          <table>
+            <tr>
+            <th>Promille Grenzen</th>
+            <th>Information</th>
+            </tr>
+            <tr>
+              <td>0.5...0.79</td>
+              <td><p>Gilt nur für Probeführerschein-Besitzer sowie Lkw- und Busfahrer.</p></td>
+            </tr>
+            <tr>
+              <td>0.8...1.19</td>
+              <td><p>Strafe von 800€ bis 3.700€. Bei erstem Vergehen 1 Monat Führerscheinentzug.
+                Bei Wiederholung min. 3 Monate.</p></td>
+            </tr>
+            <tr>
+              <td>1.20...1.59</td>
+              <td><p>Strafe von 1.200€ bis 4.400€. Mindestens 4 Monate Führerscheinentzug.
+                Bei Wiederholung min. 3 Monate</p></td>
+            </tr>
+            <tr>
+              <td>ab 1.60</td>
+              <td><p>Strafe von 1.600€ bis 5.900€. Mindestens 6 Monate Führerscheinentzug.
+                Nachschulung und zusätzliche Kosten von ca 863€, Amtsarzt und verkehrpsychologische Untersuchung.</p></td>
+            </tr>
+          </table>
+        </div>
+
       </section>
   <script>
   var total = 573,
@@ -335,8 +355,15 @@
 
   function berechne_BAK(){
     BAK = (0.8 * A) / GKW;
+    setGraphBAK();
   }
 
+function setGraphBAK(){
+  document.getElementById("graphBAK").setAttribute('fill','#333333');
+  document.getElementById("graphBAK").setAttribute('height','50');
+  document.getElementById("graphBAK").setAttribute('width', BAK*100);
+
+}
 
 
 function getA(){
