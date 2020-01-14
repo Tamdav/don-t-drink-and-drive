@@ -3,7 +3,6 @@
 
   <head>
   <title>PromilleRechner</title>
-    <script language="javascript" type="text/javascript" charset="utf-8" src="script.js"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -207,6 +206,8 @@
         </div>
 
       </section>
+
+  </div>
   <script>
   var total = 573,
       buttons = document.querySelector('.buttons'),
@@ -271,8 +272,8 @@
   var Koerpergroesse = document.getElementById("groesse").value;
   var Koerpergewicht = document.getElementById("gewicht").value;
   var Alter = document.getElementById("alter").value;
- // var Trinkstart = document.getElementById("anfang").innerHTML;
- // var Trinkende = document.getElementById("ende").innerHTML;
+  // var Trinkstart = document.getElementById("anfang").innerHTML;
+  // var Trinkende = document.getElementById("ende").innerHTML;
   var Getränke_Liste_Array = new Array();   //Alle ausgewählten Getränke in einer Liste
   var A = 0;
   var GKW = 0
@@ -281,37 +282,37 @@
   var newId = 0;
   var clone;
   var BAK;
- // var Tinkeende_hours = Trinkende.getHours();
- // var Tinkeende_minutes = Trinkende.getMinutes();
- //
- // var Uhrzeit = new Date();
- // var Uhrzeit_Hours = Uhrzeit.getHours()
- // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
+  // var Tinkeende_hours = Trinkende.getHours();
+  // var Tinkeende_minutes = Trinkende.getMinutes();
+  //
+  // var Uhrzeit = new Date();
+  // var Uhrzeit_Hours = Uhrzeit.getHours()
+  // var Uhrzeit_Minutes = Uhrzeit.getMinutes();
 
- //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
- // var getränkeListe[];
- //   var mengen_liste[];
- //   var metrik_liste[];
- //
- //   getränkeListe.push(document.querySelector('getraenkeListe').value);
- //   mengen_liste.push(document.querySelector('menge').innerHTML);
- //   metrik_liste.push(document.querySelector('metrik').value);
+  //var Berechne_Btn = document.querySelector('berechneDaten').addEventListener('click',validate);
+  // var getränkeListe[];
+  //   var mengen_liste[];
+  //   var metrik_liste[];
+  //
+  //   getränkeListe.push(document.querySelector('getraenkeListe').value);
+  //   mengen_liste.push(document.querySelector('menge').innerHTML);
+  //   metrik_liste.push(document.querySelector('metrik').value);
 
 
- function duplicate(){
- let clone = document.querySelector('#drinks-listen0').cloneNode(true);
- clone.setAttribute( 'drinks-listen', ++newId );
+  function duplicate(){
+  let clone = document.querySelector('#drinks-listen0').cloneNode(true);
+  clone.setAttribute( 'drinks-listen', ++newId );
 
- document.querySelector('#duplication_model').appendChild( clone );
+  document.querySelector('#duplication_model').appendChild( clone );
 
-}
+  }
 
- function validate(){
+  function validate(){
    is_checked();
 
    getA();
    berechne();
- }
+  }
 
 
   function is_checked(){
@@ -337,7 +338,7 @@
 
 
    alert("BAK: " + BAK);
- }
+  }
     //Berechnung der Tatsächlichen Werte nach dem Trinken
   function berechne_GKW_Frau(){
     GKW = 1.055 * (-2.097 + 0.1069 * Koerpergroesse + 0.2466 * Koerpergewicht);
@@ -349,7 +350,7 @@
   }
 
   // Für Männer ergibt sich ein BAK: (0,8 x 20) / (1,055 x (2.447 - 0.09516 x 38 + 0.1074 x 179 + 0.3362 x 70)) = 0,36 Promille
- //Für Frauen ergibt sich ein BAK: (0,8 x 20) / (1,055 x (-2.097+0.1069 x 165 + 0.2466 x 58)) = 0,51 Promille
+  //Für Frauen ergibt sich ein BAK: (0,8 x 20) / (1,055 x (-2.097+0.1069 x 165 + 0.2466 x 58)) = 0,51 Promille
 
 
 
@@ -358,15 +359,15 @@
     setGraphBAK();
   }
 
-function setGraphBAK(){
+  function setGraphBAK(){
   document.getElementById("graphBAK").setAttribute('fill','#333333');
   document.getElementById("graphBAK").setAttribute('height','50');
   document.getElementById("graphBAK").setAttribute('width', BAK*100);
 
-}
+  }
 
 
-function getA(){
+  function getA(){
 
     let alkoholgehalt = document.querySelectorAll('#getraenkeListe');
     let metrik = document.querySelectorAll('#metrik');
@@ -386,9 +387,9 @@ function getA(){
 
   alert("all drinks alkoholgehalt: " + A);
 
-}
+  }
 
-function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
+  function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
   alert("alkoholgehalt: " + alkoholgehalt);
   alert("metrik: " + metrik);
   alert("Gewählte menge: " + menge);
@@ -404,12 +405,11 @@ function berechne_A(Alkoholsorte, alkoholgehalt, metrik, menge , i){
      A_neu = menge * alkoholgehalt;
      Getränke_Liste_Array[i] = new Array(Alkoholsorte, alkoholgehalt, menge, A_neu); //A_neu ist alk-gehalt aufgerechnet auf die Menge
 
-}
-
-
+  }
 
   </script>
-  </div>
+
+
   <footer>
     <p>Webdesign by DJS, &copy Gruppe 6 WS19/20</p>
   </footer>
