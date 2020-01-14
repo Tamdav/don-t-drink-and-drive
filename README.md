@@ -2,6 +2,7 @@
 
 ##index
 
+  * Funktionen
   * Probleme und Einstufung der Probleme
   * index.html
     * Funktion
@@ -12,6 +13,14 @@
   * Aufgabenverteilung
   * Zeitplanung
 
+## Funktionen
+
++ Einlesen von Inputs von verschiedenen Getränken und persönlichen Merkmalen
++ Webseitennavigation mittels Reiter
++ Berechnung des ungefähren Alkoholgehaltes im Blut
++ Einverständnisabfrage vor der Berechnung
++ Darstellung in Graphiken
++ Verlinkung zur ÖAMTC Seite für weitere Informationen
 
 ## Probleme und Einstufung der Probleme
 
@@ -22,7 +31,10 @@
 |visible setzen im JavaScript funktioniert nicht      |   X   |      |      |   X  |
 |Getränke container hinzufügen                        |       |      |   X  |   X  |
 |Getränke dynamisch hinzufügen (1)                    |       |      |   X  |   X  |
-|Aktive Tabs farblich hinterlegen                     |   X   |      |      |      |
+|Aktive Tabs farblich hinterlegen                     |   X   |      |      |   x  |
+|Ergebnis in Graphik einbinden                        |       |      |   X  |   x  |
+|Richtige Berechnung der Daten                        |       |      |   x  |   x  |
+|Einlesen der Inputfelder                             |       |      |   X  |   x  |
 
   (1) Trotz viel Aufwand konnte das Problem nicht mittels php gelöst werden und musste hartgecoded hinzugefügt werden, da sonst die ganze Webseite nicht funktioniert hätte.
 
@@ -67,8 +79,10 @@ Das CSS File ist für die Formatierung der Webseite zuständig. Wie bereits in d
 ## script.js (Controller)
 ### Funktion
 
-Im JavaScript erfolgt die Berechnun des Alkoholgehalts im Blut. Dafür müssen die Inputs vom HTML-File übergeben werden. Mithilfe der Watson-Formel wird dann der Alkoholgehalt ermittelt.
-Für die Berechnung mittels Watson-Formel muss zwischen Mann und Frau unterschieden werden, da Alkohol bei beiden Geschlechtern unterschiedlich verarbeitet wird.  
+Im JavaScript erfolgt die Berechnung des Alkoholgehalts im Blut. Dafür müssen die Inputs vom HTML-File übergeben werden. Mithilfe der Watson-Formel wird dann der Alkoholgehalt ermittelt.
+Für die Berechnung mittels Watson-Formel muss zwischen Mann und Frau unterschieden werden, da Alkohol bei beiden Geschlechtern unterschiedlich verarbeitet wird. Das Duplizieren der Getränkeeingabe wird mittels einer Formel durchgeführt.
+Vor der Berechnung wird geprüft ob die Checkbox angekreuzt wird sonst kommt es zu einer Warnung.
+
 
 
 
