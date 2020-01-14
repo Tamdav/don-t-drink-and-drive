@@ -432,7 +432,8 @@ table td{
 
 .chart2 a{
  text-decoration: none;
- weight: bold italic;
+ weight: bold;
+ font-style: italic;
  color: #333333;
 
 }
