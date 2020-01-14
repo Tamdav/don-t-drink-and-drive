@@ -31,10 +31,10 @@
 |visible setzen im JavaScript funktioniert nicht      |   X   |      |      |   X  |
 |Getränke container hinzufügen                        |       |      |   X  |   X  |
 |Getränke dynamisch hinzufügen (1)                    |       |      |   X  |   X  |
-|Aktive Tabs farblich hinterlegen                     |   X   |      |      |      |
-|Ergebnis in Graphik einbinden                        |       |      |   X  |   x  |
-|Richtige Berechnung der Daten                        |       |      |   x  |   x  |
-|Einlesen der Inputfelder                             |       |      |   X  |   x  |
+|Aktive Tabs farblich hinterlegen                     |   X   |      |      |   X  |
+|Ergebnis in Graphik einbinden                        |       |      |   X  |   X  |
+|Richtige Berechnung der Daten                        |       |      |   X  |   X  |
+|Einlesen der Inputfelder                             |       |      |   X  |   X  |
 
   (1) Trotz viel Aufwand konnte das Problem nicht mittels php gelöst werden und musste hartgecoded hinzugefügt werden, da sonst die ganze Webseite nicht funktioniert hätte.
 
